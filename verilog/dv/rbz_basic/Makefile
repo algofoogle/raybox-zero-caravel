@@ -47,5 +47,5 @@ coco_test_gl: rbz_basic.hex
 	-g2009 \
 	-o sim_build/sim.vvp rbz_basic_tb.v
 
-	TESTCASE=test_start,test_all_gl MODULE=test_rbz_basic vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
+	TESTCASE=test_start,test_all MODULE=test_rbz_basic vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 	! grep failure results.xml

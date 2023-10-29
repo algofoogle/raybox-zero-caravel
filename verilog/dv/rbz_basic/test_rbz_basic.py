@@ -9,6 +9,9 @@ import random
 # its known initial state.
 @cocotb.test()
 async def test_start(dut):
+    # dut.VGND <= 0
+    # dut.VPWR <= 1
+
     clock = Clock(dut.clk, 40, units="ns")
     cocotb.fork(clock.start())
 
