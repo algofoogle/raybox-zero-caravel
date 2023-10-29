@@ -1,0 +1,65 @@
+{
+    "DESIGN_NAME": "top_ew_algofoogle",
+    "ROUTING_CORES": 6,
+    "KLAYOUT_XOR_THREADS": 6,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/top_ew_algofoogle.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/debug_overlay.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/fixed_point_params.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/helpers.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/lzc.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/map_overlay.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/map_rom.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/pov.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/rbzero.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/reciprocal.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/row_render.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/spi_registers.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/vga_mux.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/vga_sync.v",
+        "dir::../../verilog/rtl/raybox-zero/src/rtl/wall_tracer.v"
+    ],
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 700 700",
+    "CLOCK_PORT": "i_clk",
+    "CLOCK_NET": "top_ew_algofoogle.i_clk",
+    "CLOCK_PERIOD": 40.0,
+    "DESIGN_IS_CORE": 0,
+    "RT_MAX_LAYER": "met4",
+    "PL_TARGET_DENSITY": 0.4,
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
+    "SYNTH_MAX_FANOUT": 6,
+    "DIODE_INSERTION_STRATEGY": 4,
+    "RUN_CVC": 1,
+    "PL_BASIC_PLACEMENT": 0,
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 45,
+        "RT_MAX_LAYER": "met4",
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcuC": {
+        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "RT_MAX_LAYER": "Metal4",
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.45
+    }
+}
