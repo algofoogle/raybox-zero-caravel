@@ -82,10 +82,13 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-    //// BEGIN: INSTANTIATION OF ANTON'S DESIGN (top_ew_algofoogle) (SNIPPET1_NoShare) ---------------------
+    //// BEGIN: INSTANTIATION OF ANTON'S DESIGN (top_ew_algofoogle) (SNIPPET2_ShareIns) ---------------------
 
     // This snippet comes from here:
-    // https://github.com/algofoogle/raybox-zero/blob/ew/src/rtl/ew_caravel_snippets/SNIPPET1_NoShare.v
+    // https://github.com/algofoogle/raybox-zero/blob/ew/src/rtl/ew_caravel_snippets/SNIPPET2_ShareIns.v
+
+    // Shared INPUT pads: IO[35,34, 32,31]
+    wire [3:0] shared_io_in = {io_in[35], io_in[34], /* skip 33 per EW */ io_in[32], io_in[31]};
 
     // Anton's assigned pads are IO[26:18]...
     // These allow easy renumbering of those pads, if necessary.
@@ -97,16 +100,16 @@ module user_project_wrapper #(
     wire [50:0] anton_la_oenb =    la_oenb[114:64]; // SoC should configure these all as its outputs (i.e. inputs to our design).
 
     // Abtractions between Anton's top design and the above pads.
-    wire [8:0]  anton_io_in;                // Design-driven: 'In' side of abtracted pads. Not all INs are used.
+    wire [8:0]  anton_io_in;                // 'In' side of abtracted pads. Only 1 ([4]) is used (bidirectional config).
     wire [8:0]  anton_io_out;               // Design-driven: 'Out' side of abstracted pads. Not all OUTs are used.
     wire [8:0]  anton_io_oeb;               // Design-driven: Direction control for each abstracted pad.
     // Splicing the various signals together into their respective abstracted pads:
     wire        anton_tex_oeb0;             // Design-driven: Controls dir of one specific IO pad (Texture QSPI io[0]).
-    wire [5:0]  anton_gpout;                // Design-driven: We splice 2 LSB into anton_io_out, discard upper 4.
+    wire [5:0]  anton_gpout;                // Design-driven: We splice 4 LSB into anton_io_out, discard upper 2.
     wire [15:0] a0s, a1s;                   // Low and high signals from our design that we can use to mix constants.
-    assign      anton_io_oeb = {a1s[1:0], a0s[1:0], anton_tex_oeb0, a0s[5:2]}; // 1100t0000 where 't' is anton_tex_oeb0.
-    assign      anton_io_out[6:5] = anton_gpout[1:0]; // Only use lower 2 (of 6) 'gpout's, plug them into the middle of Anton's OUTPUT pads.
-    wire [3:0]  anton_tex_in = {anton_la_in[50], anton_io_in[8], anton_io_in[7], anton_io_in[4]};
+    assign      anton_io_oeb = {a0s[3:0], anton_tex_oeb0, a0s[7:4]}; // 0000t0000 where 't' is anton_tex_oeb0.
+    assign      anton_io_out[8:5] = anton_gpout[3:0]; // Only use lower 4 (of 6) 'gpout's, plug them into the top of Anton's OUTPUT pads.
+    wire [3:0]  anton_tex_in = {shared_io_in[2:0], anton_io_in[4]}; // Top 3 are shared inputs, bottom 1 is Anton's bidir pin.
     wire        anton_o_reset;              // For now this is just used during cocotb tests.
 
 
@@ -136,7 +139,7 @@ module user_project_wrapper #(
         .o_tex_out0             (anton_io_out[4]),
         .i_tex_in               (anton_tex_in),
 
-        .o_gpout                (anton_gpout), //NOTE: Lower 2 bits are used, upper 4 are not.
+        .o_gpout                (anton_gpout), //NOTE: Lower 4 bits are used, upper 2 are not.
 
         .i_vec_csb              (anton_la_in[2]),
         .i_vec_sclk             (anton_la_in[3]),

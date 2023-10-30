@@ -44,16 +44,16 @@ module user_project_wrapper (user_clock2,
  wire \a0s[13] ;
  wire \a0s[14] ;
  wire \a0s[15] ;
- wire \a0s[6] ;
- wire \a0s[7] ;
  wire \a0s[8] ;
  wire \a0s[9] ;
+ wire \a1s[0] ;
  wire \a1s[10] ;
  wire \a1s[11] ;
  wire \a1s[12] ;
  wire \a1s[13] ;
  wire \a1s[14] ;
  wire \a1s[15] ;
+ wire \a1s[1] ;
  wire \a1s[2] ;
  wire \a1s[3] ;
  wire \a1s[4] ;
@@ -62,8 +62,6 @@ module user_project_wrapper (user_clock2,
  wire \a1s[7] ;
  wire \a1s[8] ;
  wire \a1s[9] ;
- wire \anton_gpout[2] ;
- wire \anton_gpout[3] ;
  wire \anton_gpout[4] ;
  wire \anton_gpout[5] ;
  wire \anton_io_oeb[4] ;
@@ -133,14 +131,14 @@ module user_project_wrapper (user_clock2,
     .i_mode({la_data_in[113],
     la_data_in[112],
     la_data_in[111]}),
-    .i_tex_in({la_data_in[114],
-    io_in[26],
-    io_in[25],
+    .i_tex_in({io_in[34],
+    io_in[32],
+    io_in[31],
     io_in[22]}),
     .o_gpout({\anton_gpout[5] ,
     \anton_gpout[4] ,
-    \anton_gpout[3] ,
-    \anton_gpout[2] ,
+    io_out[26],
+    io_out[25],
     io_out[24],
     io_out[23]}),
     .o_rgb({_NC1,
@@ -181,8 +179,8 @@ module user_project_wrapper (user_clock2,
     \a1s[4] ,
     \a1s[3] ,
     \a1s[2] ,
-    io_oeb[26],
-    io_oeb[25]}),
+    \a1s[1] ,
+    \a1s[0] }),
     .zeros({\a0s[15] ,
     \a0s[14] ,
     \a0s[13] ,
@@ -191,12 +189,12 @@ module user_project_wrapper (user_clock2,
     \a0s[10] ,
     \a0s[9] ,
     \a0s[8] ,
-    \a0s[7] ,
-    \a0s[6] ,
     io_oeb[21],
     io_oeb[20],
     io_oeb[19],
     io_oeb[18],
+    io_oeb[26],
+    io_oeb[25],
     io_oeb[24],
     io_oeb[23]}));
  assign io_oeb[22] = \anton_io_oeb[4] ;

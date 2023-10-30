@@ -43,7 +43,6 @@ coco_test_gl: rbz_basic.hex
 	-f$(VERILOG_PATH)/includes/includes.rtl.caravel \
 	-f$(USER_PROJECT_VERILOG)/includes/includes.gl.$(CONFIG) \
 	-v $(USER_PROJECT_VERILOG)/dv/rbz_basic/texture_rom/W25Q128JVxIM.v \
-	-I $(USER_PROJECT_VERILOG)/rtl/raybox-zero/src/rtl \
 	-g2009 \
 	-o sim_build/sim.vvp rbz_basic_tb.v
 

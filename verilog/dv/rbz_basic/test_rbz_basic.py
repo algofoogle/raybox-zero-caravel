@@ -3,6 +3,7 @@ from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles, with_timeout
 from cocotb.types import Logic
 import random
+import re
 
 # Startup: Wait for the design to pulse gpio (to show firmware has started running)
 # and then wait for our design's reset to be released to know it is starting from
@@ -77,20 +78,25 @@ async def test_all(dut):
     img.write("P3\n")
     img.write(f"{hrange} {vrange}\n")
     img.write("255\n")
+
     for n in range(vrange): # 525 lines
         print(f"Rendering line {n}")
         for n in range(hrange): # 800 pixel clocks per line.
-            if dut.o_gpout0.value.binstr == 'x':
-                # Output is unknown; make it magenta:
-                r = 255
-                g = 0
-                b = 255
+            if 'x' in dut.o_gpout.value.binstr:
+                # Output is unknown; make it green:
+                r = 0
+                g = 255
+                b = 0
             else:
-                g0 = dut.o_gpout0.value  # Default gpout0 is Green low bit.
-                g1 = dut.o_gpout1.value  # Default gpout1 is Green high bit.
-                r = (0==dut.o_hsync.value)<<5
-                g = (g1<<7) | (g0<<6)
-                b = (0==dut.o_vsync.value)<<5
+                b0 = dut.o_gpout0.value  # LA-overridden gpout0 is Blue low bit.
+                b1 = dut.o_gpout1.value  # LA-overridden gpout1 is Blue high bit.
+                r0 = dut.o_gpout2.value  # LA-overridden gpout2 is Red low bit.
+                r1 = dut.o_gpout3.value  # LA-overridden gpout3 is Red high bit.
+                hsyncb = (0==dut.o_hsync.value)<<5
+                vsyncb = (0==dut.o_vsync.value)<<5
+                r = (r1<<7) | (r0<<6) | hsyncb
+                g = 0
+                b = (b1<<7) | (b0<<6)
             img.write(f"{r} {g} {b}\n")
             await ClockCycles(dut.clk, 1) 
     print("Waiting 1 more clock, for start of next line...")
