@@ -17,7 +17,7 @@ This repo wraps [raybox-zero] (namely its `ew` branch too).
 [mpw-8c]: https://github.com/efabless/caravel_user_project/tree/mpw-8c
 [Zero to ASIC Course]: https://zerotoasiccourse.com/
 [ew branch]: https://github.com/algofoogle/raybox-zero-caravel/tree/ew
-[raybox zero]: https://github.com/algofoogle/raybox-zero/tree/ew
+[raybox-zero]: https://github.com/algofoogle/raybox-zero/tree/ew
 
 ## Old notes/guides from eFabless
 
