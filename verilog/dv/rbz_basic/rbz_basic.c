@@ -37,8 +37,13 @@ void main()
     reg_mprj_io_22  = GPIO_MODE_USER_STD_BIDIRECTIONAL; // Texture SPI io[0]
     reg_mprj_io_23  = GPIO_MODE_USER_STD_OUTPUT;        // o_gpout[0]
     reg_mprj_io_24  = GPIO_MODE_USER_STD_OUTPUT;        // o_gpout[1]
-    reg_mprj_io_25  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[1]
-    reg_mprj_io_26  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[2]
+    reg_mprj_io_25  = GPIO_MODE_USER_STD_OUTPUT;        // o_gpout[2]
+    reg_mprj_io_26  = GPIO_MODE_USER_STD_OUTPUT;        // o_gpout[3]
+    // Our design also uses SHARED INPUTS (31,32, 34,35); configure them too:
+    reg_mprj_io_31  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[1]
+    reg_mprj_io_32  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[2]
+    reg_mprj_io_34  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[3]
+    reg_mprj_io_35  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // (Unused)
     // Configure all other IOs that we don't care about to be inputs...
     //NOTE: We're skipping IOs that remain under normal SoC control.
     reg_mprj_io_8   = GPIO_MODE_USER_STD_INPUT_NOPULL;
@@ -55,11 +60,7 @@ void main()
     reg_mprj_io_28  = GPIO_MODE_USER_STD_INPUT_NOPULL;
     reg_mprj_io_29  = GPIO_MODE_USER_STD_INPUT_NOPULL;
     reg_mprj_io_30  = GPIO_MODE_USER_STD_INPUT_NOPULL;
-    reg_mprj_io_31  = GPIO_MODE_USER_STD_INPUT_NOPULL;
-    reg_mprj_io_32  = GPIO_MODE_USER_STD_INPUT_NOPULL;
-    reg_mprj_io_33  = GPIO_MODE_USER_STD_INPUT_NOPULL;
-    reg_mprj_io_34  = GPIO_MODE_USER_STD_INPUT_NOPULL;
-    reg_mprj_io_35  = GPIO_MODE_USER_STD_INPUT_NOPULL;
+    reg_mprj_io_33  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // (Not a shared input)
 
     // Apply the above configuration:
     reg_mprj_xfer = 1;
@@ -118,6 +119,8 @@ void main()
     // -----------------------000000---     i_gpout4_sel (unused)
     // -----------------------------1--     i_debug_map_overlay
     // ------------------------------00     Top 2 bits of i_gpout3_sel
+
+    //NOTE: gpout[3:2] should output the red channel by default.
 
     // Now we'll make sure reset is asserted on our design's 'reset lock'.
     // The way this reset lock works is that if its lowest two LAs are both

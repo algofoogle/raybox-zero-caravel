@@ -22,6 +22,8 @@ module rbz_basic_tb;
 
     // Convenience signals that match what the cocotb test modules are looking for:
     //SMELL: Should these be regs instead?
+    // This is per EWSPEC SNIPPET2:
+    // https://github.com/algofoogle/raybox-zero/blob/ew/doc/EWSPEC.md#if-9-pads-available-plus-extra-sharedmuxed-inputs
     wire o_hsync    = mprj_io[18];
     wire o_vsync    = mprj_io[19];
     wire o_tex_csb  = mprj_io[20];
@@ -29,9 +31,14 @@ module rbz_basic_tb;
     wire io_tex_io0 = mprj_io[22]; // BIDIRECTIONAL!
     wire o_gpout0   = mprj_io[23];
     wire o_gpout1   = mprj_io[24];
-    assign            mprj_io[25] = i_tex_in1;
-    assign            mprj_io[26] = i_tex_in2;
-    wire i_tex_in1, i_tex_in2;
+    wire o_gpout2   = mprj_io[25];
+    wire o_gpout3   = mprj_io[26];
+    wire [3:0] o_gpout = {mprj_io[26:23]}; // All gpouts as a handy vector.
+    // Shared INPUT pads 31,32, (skip 33), 34, (unused: 35)
+    assign            mprj_io[31] = i_tex_in1;
+    assign            mprj_io[32] = i_tex_in2;
+    assign            mprj_io[34] = i_tex_in3;
+    wire i_tex_in1, i_tex_in2, i_tex_in3;
 
     // Interface to XIP firmware ROM:
     wire flash_csb;
@@ -89,10 +96,10 @@ module rbz_basic_tb;
     W25Q128JVxIM texture_rom(
         .CSn    (o_tex_csb),    // SPI /CS
         .CLK    (o_tex_sclk),   // SPI SCLK
-        .DIO    (io_tex_io0),   // SPI io0 (MOSI)
+        .DIO    (mprj_io[22]), //io_tex_io0),   // SPI io0 (MOSI)
         .DO     (i_tex_in1),    // SPI io1 (MISO)
-        .WPn    (i_tex_in2)     // SPI io2
-        //.HOLDn  (1'b1)        // SPI io3: Not used in raybox-zero.
+        .WPn    (i_tex_in2),    // SPI io2
+        .HOLDn  (i_tex_in3)     // SPI io3. //NOTE: Not used in raybox-zero.
     );
 
 
