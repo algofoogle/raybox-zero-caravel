@@ -89,9 +89,10 @@ void main()
     // i_gpout0_sel <= 31 (rgb[22])
     // i_gpout1_sel <= 30 (rgb[23])
     // i_debug_vec_overlay <= 1
-    reg_la2_data = la2 = 0b011111000101111000000;
+    reg_la2_data = la2 =
+     0b00001000000011111000101111000000;
     // 0000----------------------------     Bottom 4 bits of i_gpout3_sel
-    // ----0---------------------------     i_debug_trace_overlay
+    // ----1---------------------------     i_debug_trace_overlay
     // -----000000---------------------     i_gpout2_sel
     // -----------011111---------------     i_gpout1_sel: 31 (rgb[23])
     // -----------------0--------------     i_reg_mosi: 0
@@ -109,7 +110,8 @@ void main()
     // 49:-- i_mode[2] <= 0
     // 48:47 i_mode[1:0] <= 11
     // 34:-- i_debug_map_overlay <= 1
-    reg_la3_data = 0b0011000000000000100;
+    reg_la3_data =
+                  0b0011000000000000100;
     // xxxxxxxxxxxxx-------------------     (unused LAs)
     // -------------0------------------     i_tex_in[3]
     // --------------0-----------------     i_mode[2]: 0=SPI textures; 1=generated textures
