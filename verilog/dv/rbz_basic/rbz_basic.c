@@ -90,20 +90,35 @@ void main()
     // i_gpout1_sel <= 30 (rgb[23])
     // i_debug_vec_overlay <= 1
     reg_la2_data = la2 = 0b011111000101111000000;
-    // 011111---------------    i_gpout1_sel: 31 (rgb[23])
-    // ------0--------------    i_reg_mosi: 0
-    // -------0-------------    i_reg_sclk: 0
-    // --------0------------    i_reg_csb: 0
-    // ---------1-----------    i_debug_vec_overlay: 1 (ON)
-    // ----------011110-----    i_gpout0_sel: 30 (rgb[22])
-    // ----------------0----    i_vec_mosi: 0
-    // -----------------0---    i_vec_sclk: 0
-    // ------------------0--    i_vec_csb: 0
-    // -------------------00    i_reset_lock_b/a: same = hold in reset
+    // 0000----------------------------     Bottom 4 bits of i_gpout3_sel
+    // ----0---------------------------     i_debug_trace_overlay
+    // -----000000---------------------     i_gpout2_sel
+    // -----------011111---------------     i_gpout1_sel: 31 (rgb[23])
+    // -----------------0--------------     i_reg_mosi: 0
+    // ------------------0-------------     i_reg_sclk: 0
+    // -------------------0------------     i_reg_csb: 0
+    // --------------------1-----------     i_debug_vec_overlay: 1 (ON)
+    // ---------------------011110-----     i_gpout0_sel: 30 (rgb[22])
+    // ---------------------------0----     i_vec_mosi: 0
+    // ----------------------------0---     i_vec_sclk: 0
+    // -----------------------------0--     i_vec_csb: 0
+    // ------------------------------00     i_reset_lock_b/a: same = hold in reset
 
-    // Turn on auto-increment:
-    // i_mode[1:0] <= 0b11
-    reg_la3_data = 0b11000000000000000;
+    // Turn on auto-increment and select external texture SPI memory (instead ofgenerated textures):
+    // 50:-- i_tex_in[3] <= 0 (unused)
+    // 49:-- i_mode[2] <= 0
+    // 48:47 i_mode[1:0] <= 11
+    // 34:-- i_debug_map_overlay <= 1
+    reg_la3_data = 0b0011000000000000100;
+    // xxxxxxxxxxxxx-------------------     (unused LAs)
+    // -------------0------------------     i_tex_in[3]
+    // --------------0-----------------     i_mode[2]: 0=SPI textures; 1=generated textures
+    // ---------------1----------------     i_mode[1]: i_inc_py
+    // ----------------1---------------     i_mode[0]: i_inc_px
+    // -----------------000000---------     i_gpout5_sel (unused)
+    // -----------------------000000---     i_gpout4_sel (unused)
+    // -----------------------------1--     i_debug_map_overlay
+    // ------------------------------00     Top 2 bits of i_gpout3_sel
 
     //NOTE: gpout[3:2] should output the red channel by default.
 

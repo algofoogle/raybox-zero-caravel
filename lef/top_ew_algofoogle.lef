@@ -6,13 +6,13 @@ MACRO top_ew_algofoogle
   CLASS BLOCK ;
   FOREIGN top_ew_algofoogle ;
   ORIGIN 0.000 0.000 ;
-  SIZE 578.870 BY 589.590 ;
+  SIZE 561.710 BY 572.430 ;
   PIN i_clk
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 10.240 578.870 10.840 ;
+        RECT 557.710 14.320 561.710 14.920 ;
     END
   END i_clk
   PIN i_debug_map_overlay
@@ -20,7 +20,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 354.320 578.870 354.920 ;
+        RECT 557.710 342.760 561.710 343.360 ;
     END
   END i_debug_map_overlay
   PIN i_debug_trace_overlay
@@ -28,7 +28,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 249.600 578.870 250.200 ;
+        RECT 557.710 242.800 561.710 243.400 ;
     END
   END i_debug_trace_overlay
   PIN i_debug_vec_overlay
@@ -36,7 +36,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 570.030 0.000 570.310 4.000 ;
+        RECT 553.010 0.000 553.290 4.000 ;
     END
   END i_debug_vec_overlay
   PIN i_gpout0_sel[0]
@@ -44,7 +44,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 478.950 0.000 479.230 4.000 ;
+        RECT 464.690 0.000 464.970 4.000 ;
     END
   END i_gpout0_sel[0]
   PIN i_gpout0_sel[1]
@@ -52,7 +52,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 494.130 0.000 494.410 4.000 ;
+        RECT 479.410 0.000 479.690 4.000 ;
     END
   END i_gpout0_sel[1]
   PIN i_gpout0_sel[2]
@@ -60,7 +60,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 509.310 0.000 509.590 4.000 ;
+        RECT 494.130 0.000 494.410 4.000 ;
     END
   END i_gpout0_sel[2]
   PIN i_gpout0_sel[3]
@@ -68,7 +68,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 524.490 0.000 524.770 4.000 ;
+        RECT 508.850 0.000 509.130 4.000 ;
     END
   END i_gpout0_sel[3]
   PIN i_gpout0_sel[4]
@@ -76,7 +76,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 539.670 0.000 539.950 4.000 ;
+        RECT 523.570 0.000 523.850 4.000 ;
     END
   END i_gpout0_sel[4]
   PIN i_gpout0_sel[5]
@@ -84,7 +84,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 554.850 0.000 555.130 4.000 ;
+        RECT 538.290 0.000 538.570 4.000 ;
     END
   END i_gpout0_sel[5]
   PIN i_gpout1_sel[0]
@@ -92,7 +92,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 70.080 578.870 70.680 ;
+        RECT 557.710 71.440 561.710 72.040 ;
     END
   END i_gpout1_sel[0]
   PIN i_gpout1_sel[1]
@@ -100,7 +100,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 85.040 578.870 85.640 ;
+        RECT 557.710 85.720 561.710 86.320 ;
     END
   END i_gpout1_sel[1]
   PIN i_gpout1_sel[2]
@@ -108,7 +108,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 100.000 578.870 100.600 ;
+        RECT 557.710 100.000 561.710 100.600 ;
     END
   END i_gpout1_sel[2]
   PIN i_gpout1_sel[3]
@@ -116,7 +116,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 114.960 578.870 115.560 ;
+        RECT 557.710 114.280 561.710 114.880 ;
     END
   END i_gpout1_sel[3]
   PIN i_gpout1_sel[4]
@@ -124,7 +124,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 129.920 578.870 130.520 ;
+        RECT 557.710 128.560 561.710 129.160 ;
     END
   END i_gpout1_sel[4]
   PIN i_gpout1_sel[5]
@@ -132,7 +132,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 144.880 578.870 145.480 ;
+        RECT 557.710 142.840 561.710 143.440 ;
     END
   END i_gpout1_sel[5]
   PIN i_gpout2_sel[0]
@@ -140,7 +140,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 159.840 578.870 160.440 ;
+        RECT 557.710 157.120 561.710 157.720 ;
     END
   END i_gpout2_sel[0]
   PIN i_gpout2_sel[1]
@@ -148,7 +148,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 174.800 578.870 175.400 ;
+        RECT 557.710 171.400 561.710 172.000 ;
     END
   END i_gpout2_sel[1]
   PIN i_gpout2_sel[2]
@@ -156,7 +156,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 189.760 578.870 190.360 ;
+        RECT 557.710 185.680 561.710 186.280 ;
     END
   END i_gpout2_sel[2]
   PIN i_gpout2_sel[3]
@@ -164,7 +164,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 204.720 578.870 205.320 ;
+        RECT 557.710 199.960 561.710 200.560 ;
     END
   END i_gpout2_sel[3]
   PIN i_gpout2_sel[4]
@@ -172,7 +172,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 219.680 578.870 220.280 ;
+        RECT 557.710 214.240 561.710 214.840 ;
     END
   END i_gpout2_sel[4]
   PIN i_gpout2_sel[5]
@@ -180,7 +180,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 234.640 578.870 235.240 ;
+        RECT 557.710 228.520 561.710 229.120 ;
     END
   END i_gpout2_sel[5]
   PIN i_gpout3_sel[0]
@@ -188,7 +188,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 264.560 578.870 265.160 ;
+        RECT 557.710 257.080 561.710 257.680 ;
     END
   END i_gpout3_sel[0]
   PIN i_gpout3_sel[1]
@@ -196,7 +196,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 279.520 578.870 280.120 ;
+        RECT 557.710 271.360 561.710 271.960 ;
     END
   END i_gpout3_sel[1]
   PIN i_gpout3_sel[2]
@@ -204,7 +204,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 294.480 578.870 295.080 ;
+        RECT 557.710 285.640 561.710 286.240 ;
     END
   END i_gpout3_sel[2]
   PIN i_gpout3_sel[3]
@@ -212,7 +212,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 309.440 578.870 310.040 ;
+        RECT 557.710 299.920 561.710 300.520 ;
     END
   END i_gpout3_sel[3]
   PIN i_gpout3_sel[4]
@@ -220,7 +220,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 324.400 578.870 325.000 ;
+        RECT 557.710 314.200 561.710 314.800 ;
     END
   END i_gpout3_sel[4]
   PIN i_gpout3_sel[5]
@@ -228,7 +228,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 339.360 578.870 339.960 ;
+        RECT 557.710 328.480 561.710 329.080 ;
     END
   END i_gpout3_sel[5]
   PIN i_gpout4_sel[0]
@@ -236,7 +236,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 369.280 578.870 369.880 ;
+        RECT 557.710 357.040 561.710 357.640 ;
     END
   END i_gpout4_sel[0]
   PIN i_gpout4_sel[1]
@@ -244,7 +244,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 384.240 578.870 384.840 ;
+        RECT 557.710 371.320 561.710 371.920 ;
     END
   END i_gpout4_sel[1]
   PIN i_gpout4_sel[2]
@@ -252,7 +252,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 399.200 578.870 399.800 ;
+        RECT 557.710 385.600 561.710 386.200 ;
     END
   END i_gpout4_sel[2]
   PIN i_gpout4_sel[3]
@@ -260,7 +260,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 414.160 578.870 414.760 ;
+        RECT 557.710 399.880 561.710 400.480 ;
     END
   END i_gpout4_sel[3]
   PIN i_gpout4_sel[4]
@@ -268,7 +268,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 429.120 578.870 429.720 ;
+        RECT 557.710 414.160 561.710 414.760 ;
     END
   END i_gpout4_sel[4]
   PIN i_gpout4_sel[5]
@@ -276,7 +276,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 444.080 578.870 444.680 ;
+        RECT 557.710 428.440 561.710 429.040 ;
     END
   END i_gpout4_sel[5]
   PIN i_gpout5_sel[0]
@@ -284,7 +284,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 459.040 578.870 459.640 ;
+        RECT 557.710 442.720 561.710 443.320 ;
     END
   END i_gpout5_sel[0]
   PIN i_gpout5_sel[1]
@@ -292,7 +292,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 474.000 578.870 474.600 ;
+        RECT 557.710 457.000 561.710 457.600 ;
     END
   END i_gpout5_sel[1]
   PIN i_gpout5_sel[2]
@@ -300,7 +300,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 488.960 578.870 489.560 ;
+        RECT 557.710 471.280 561.710 471.880 ;
     END
   END i_gpout5_sel[2]
   PIN i_gpout5_sel[3]
@@ -308,7 +308,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 503.920 578.870 504.520 ;
+        RECT 557.710 485.560 561.710 486.160 ;
     END
   END i_gpout5_sel[3]
   PIN i_gpout5_sel[4]
@@ -316,7 +316,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 518.880 578.870 519.480 ;
+        RECT 557.710 499.840 561.710 500.440 ;
     END
   END i_gpout5_sel[4]
   PIN i_gpout5_sel[5]
@@ -324,7 +324,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 533.840 578.870 534.440 ;
+        RECT 557.710 514.120 561.710 514.720 ;
     END
   END i_gpout5_sel[5]
   PIN i_la_invalid
@@ -332,7 +332,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 387.870 0.000 388.150 4.000 ;
+        RECT 376.370 0.000 376.650 4.000 ;
     END
   END i_la_invalid
   PIN i_mode[0]
@@ -340,7 +340,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 548.800 578.870 549.400 ;
+        RECT 557.710 528.400 561.710 529.000 ;
     END
   END i_mode[0]
   PIN i_mode[1]
@@ -348,7 +348,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 563.760 578.870 564.360 ;
+        RECT 557.710 542.680 561.710 543.280 ;
     END
   END i_mode[1]
   PIN i_mode[2]
@@ -356,7 +356,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 578.720 578.870 579.320 ;
+        RECT 557.710 556.960 561.710 557.560 ;
     END
   END i_mode[2]
   PIN i_reg_csb
@@ -364,7 +364,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 25.200 578.870 25.800 ;
+        RECT 557.710 28.600 561.710 29.200 ;
     END
   END i_reg_csb
   PIN i_reg_mosi
@@ -372,7 +372,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 40.160 578.870 40.760 ;
+        RECT 557.710 42.880 561.710 43.480 ;
     END
   END i_reg_mosi
   PIN i_reg_sclk
@@ -380,7 +380,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 574.870 55.120 578.870 55.720 ;
+        RECT 557.710 57.160 561.710 57.760 ;
     END
   END i_reg_sclk
   PIN i_reset_lock_a
@@ -388,7 +388,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 403.050 0.000 403.330 4.000 ;
+        RECT 391.090 0.000 391.370 4.000 ;
     END
   END i_reset_lock_a
   PIN i_reset_lock_b
@@ -396,7 +396,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 418.230 0.000 418.510 4.000 ;
+        RECT 405.810 0.000 406.090 4.000 ;
     END
   END i_reset_lock_b
   PIN i_tex_in[0]
@@ -404,7 +404,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 43.790 585.590 44.070 589.590 ;
+        RECT 44.710 568.430 44.990 572.430 ;
     END
   END i_tex_in[0]
   PIN i_tex_in[1]
@@ -412,7 +412,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 31.830 585.590 32.110 589.590 ;
+        RECT 33.210 568.430 33.490 572.430 ;
     END
   END i_tex_in[1]
   PIN i_tex_in[2]
@@ -420,7 +420,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 19.870 585.590 20.150 589.590 ;
+        RECT 21.710 568.430 21.990 572.430 ;
     END
   END i_tex_in[2]
   PIN i_tex_in[3]
@@ -428,7 +428,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 7.910 585.590 8.190 589.590 ;
+        RECT 10.210 568.430 10.490 572.430 ;
     END
   END i_tex_in[3]
   PIN i_vec_csb
@@ -436,7 +436,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 433.410 0.000 433.690 4.000 ;
+        RECT 420.530 0.000 420.810 4.000 ;
     END
   END i_vec_csb
   PIN i_vec_mosi
@@ -444,7 +444,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 448.590 0.000 448.870 4.000 ;
+        RECT 435.250 0.000 435.530 4.000 ;
     END
   END i_vec_mosi
   PIN i_vec_sclk
@@ -452,7 +452,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 463.770 0.000 464.050 4.000 ;
+        RECT 449.970 0.000 450.250 4.000 ;
     END
   END i_vec_sclk
   PIN o_gpout[0]
@@ -460,7 +460,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 115.550 585.590 115.830 589.590 ;
+        RECT 113.710 568.430 113.990 572.430 ;
     END
   END o_gpout[0]
   PIN o_gpout[1]
@@ -468,7 +468,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 103.590 585.590 103.870 589.590 ;
+        RECT 102.210 568.430 102.490 572.430 ;
     END
   END o_gpout[1]
   PIN o_gpout[2]
@@ -476,7 +476,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 91.630 585.590 91.910 589.590 ;
+        RECT 90.710 568.430 90.990 572.430 ;
     END
   END o_gpout[2]
   PIN o_gpout[3]
@@ -484,7 +484,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 79.670 585.590 79.950 589.590 ;
+        RECT 79.210 568.430 79.490 572.430 ;
     END
   END o_gpout[3]
   PIN o_gpout[4]
@@ -492,7 +492,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 67.710 585.590 67.990 589.590 ;
+        RECT 67.710 568.430 67.990 572.430 ;
     END
   END o_gpout[4]
   PIN o_gpout[5]
@@ -500,7 +500,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 55.750 585.590 56.030 589.590 ;
+        RECT 56.210 568.430 56.490 572.430 ;
     END
   END o_gpout[5]
   PIN o_hsync
@@ -508,7 +508,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 187.310 585.590 187.590 589.590 ;
+        RECT 182.710 568.430 182.990 572.430 ;
     END
   END o_hsync
   PIN o_reset
@@ -516,7 +516,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 372.690 0.000 372.970 4.000 ;
+        RECT 361.650 0.000 361.930 4.000 ;
     END
   END o_reset
   PIN o_rgb[0]
@@ -532,7 +532,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 160.170 0.000 160.450 4.000 ;
+        RECT 155.570 0.000 155.850 4.000 ;
     END
   END o_rgb[10]
   PIN o_rgb[11]
@@ -540,7 +540,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 175.350 0.000 175.630 4.000 ;
+        RECT 170.290 0.000 170.570 4.000 ;
     END
   END o_rgb[11]
   PIN o_rgb[12]
@@ -548,7 +548,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 190.530 0.000 190.810 4.000 ;
+        RECT 185.010 0.000 185.290 4.000 ;
     END
   END o_rgb[12]
   PIN o_rgb[13]
@@ -556,7 +556,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 205.710 0.000 205.990 4.000 ;
+        RECT 199.730 0.000 200.010 4.000 ;
     END
   END o_rgb[13]
   PIN o_rgb[14]
@@ -564,7 +564,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 220.890 0.000 221.170 4.000 ;
+        RECT 214.450 0.000 214.730 4.000 ;
     END
   END o_rgb[14]
   PIN o_rgb[15]
@@ -572,7 +572,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 236.070 0.000 236.350 4.000 ;
+        RECT 229.170 0.000 229.450 4.000 ;
     END
   END o_rgb[15]
   PIN o_rgb[16]
@@ -580,7 +580,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 251.250 0.000 251.530 4.000 ;
+        RECT 243.890 0.000 244.170 4.000 ;
     END
   END o_rgb[16]
   PIN o_rgb[17]
@@ -588,7 +588,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 266.430 0.000 266.710 4.000 ;
+        RECT 258.610 0.000 258.890 4.000 ;
     END
   END o_rgb[17]
   PIN o_rgb[18]
@@ -596,7 +596,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 281.610 0.000 281.890 4.000 ;
+        RECT 273.330 0.000 273.610 4.000 ;
     END
   END o_rgb[18]
   PIN o_rgb[19]
@@ -604,7 +604,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 296.790 0.000 297.070 4.000 ;
+        RECT 288.050 0.000 288.330 4.000 ;
     END
   END o_rgb[19]
   PIN o_rgb[1]
@@ -612,7 +612,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 23.550 0.000 23.830 4.000 ;
+        RECT 23.090 0.000 23.370 4.000 ;
     END
   END o_rgb[1]
   PIN o_rgb[20]
@@ -620,7 +620,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 311.970 0.000 312.250 4.000 ;
+        RECT 302.770 0.000 303.050 4.000 ;
     END
   END o_rgb[20]
   PIN o_rgb[21]
@@ -628,7 +628,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 327.150 0.000 327.430 4.000 ;
+        RECT 317.490 0.000 317.770 4.000 ;
     END
   END o_rgb[21]
   PIN o_rgb[22]
@@ -636,7 +636,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 342.330 0.000 342.610 4.000 ;
+        RECT 332.210 0.000 332.490 4.000 ;
     END
   END o_rgb[22]
   PIN o_rgb[23]
@@ -644,7 +644,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 357.510 0.000 357.790 4.000 ;
+        RECT 346.930 0.000 347.210 4.000 ;
     END
   END o_rgb[23]
   PIN o_rgb[2]
@@ -652,7 +652,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 38.730 0.000 39.010 4.000 ;
+        RECT 37.810 0.000 38.090 4.000 ;
     END
   END o_rgb[2]
   PIN o_rgb[3]
@@ -660,7 +660,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 53.910 0.000 54.190 4.000 ;
+        RECT 52.530 0.000 52.810 4.000 ;
     END
   END o_rgb[3]
   PIN o_rgb[4]
@@ -668,7 +668,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 69.090 0.000 69.370 4.000 ;
+        RECT 67.250 0.000 67.530 4.000 ;
     END
   END o_rgb[4]
   PIN o_rgb[5]
@@ -676,7 +676,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 84.270 0.000 84.550 4.000 ;
+        RECT 81.970 0.000 82.250 4.000 ;
     END
   END o_rgb[5]
   PIN o_rgb[6]
@@ -684,7 +684,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 99.450 0.000 99.730 4.000 ;
+        RECT 96.690 0.000 96.970 4.000 ;
     END
   END o_rgb[6]
   PIN o_rgb[7]
@@ -692,7 +692,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 114.630 0.000 114.910 4.000 ;
+        RECT 111.410 0.000 111.690 4.000 ;
     END
   END o_rgb[7]
   PIN o_rgb[8]
@@ -700,7 +700,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 129.810 0.000 130.090 4.000 ;
+        RECT 126.130 0.000 126.410 4.000 ;
     END
   END o_rgb[8]
   PIN o_rgb[9]
@@ -708,7 +708,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 144.990 0.000 145.270 4.000 ;
+        RECT 140.850 0.000 141.130 4.000 ;
     END
   END o_rgb[9]
   PIN o_tex_csb
@@ -716,7 +716,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 163.390 585.590 163.670 589.590 ;
+        RECT 159.710 568.430 159.990 572.430 ;
     END
   END o_tex_csb
   PIN o_tex_oeb0
@@ -724,7 +724,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 151.430 585.590 151.710 589.590 ;
+        RECT 148.210 568.430 148.490 572.430 ;
     END
   END o_tex_oeb0
   PIN o_tex_out0
@@ -732,7 +732,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 139.470 585.590 139.750 589.590 ;
+        RECT 136.710 568.430 136.990 572.430 ;
     END
   END o_tex_out0
   PIN o_tex_sclk
@@ -740,7 +740,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 127.510 585.590 127.790 589.590 ;
+        RECT 125.210 568.430 125.490 572.430 ;
     END
   END o_tex_sclk
   PIN o_vsync
@@ -748,7 +748,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 175.350 585.590 175.630 589.590 ;
+        RECT 171.210 568.430 171.490 572.430 ;
     END
   END o_vsync
   PIN ones[0]
@@ -756,7 +756,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 570.030 585.590 570.310 589.590 ;
+        RECT 550.710 568.430 550.990 572.430 ;
     END
   END ones[0]
   PIN ones[10]
@@ -764,7 +764,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 450.430 585.590 450.710 589.590 ;
+        RECT 435.710 568.430 435.990 572.430 ;
     END
   END ones[10]
   PIN ones[11]
@@ -772,7 +772,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 438.470 585.590 438.750 589.590 ;
+        RECT 424.210 568.430 424.490 572.430 ;
     END
   END ones[11]
   PIN ones[12]
@@ -780,7 +780,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 426.510 585.590 426.790 589.590 ;
+        RECT 412.710 568.430 412.990 572.430 ;
     END
   END ones[12]
   PIN ones[13]
@@ -788,7 +788,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 414.550 585.590 414.830 589.590 ;
+        RECT 401.210 568.430 401.490 572.430 ;
     END
   END ones[13]
   PIN ones[14]
@@ -796,7 +796,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 402.590 585.590 402.870 589.590 ;
+        RECT 389.710 568.430 389.990 572.430 ;
     END
   END ones[14]
   PIN ones[15]
@@ -804,7 +804,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 390.630 585.590 390.910 589.590 ;
+        RECT 378.210 568.430 378.490 572.430 ;
     END
   END ones[15]
   PIN ones[1]
@@ -812,7 +812,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 558.070 585.590 558.350 589.590 ;
+        RECT 539.210 568.430 539.490 572.430 ;
     END
   END ones[1]
   PIN ones[2]
@@ -820,7 +820,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 546.110 585.590 546.390 589.590 ;
+        RECT 527.710 568.430 527.990 572.430 ;
     END
   END ones[2]
   PIN ones[3]
@@ -828,7 +828,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 534.150 585.590 534.430 589.590 ;
+        RECT 516.210 568.430 516.490 572.430 ;
     END
   END ones[3]
   PIN ones[4]
@@ -836,7 +836,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 522.190 585.590 522.470 589.590 ;
+        RECT 504.710 568.430 504.990 572.430 ;
     END
   END ones[4]
   PIN ones[5]
@@ -844,7 +844,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 510.230 585.590 510.510 589.590 ;
+        RECT 493.210 568.430 493.490 572.430 ;
     END
   END ones[5]
   PIN ones[6]
@@ -852,7 +852,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 498.270 585.590 498.550 589.590 ;
+        RECT 481.710 568.430 481.990 572.430 ;
     END
   END ones[6]
   PIN ones[7]
@@ -860,7 +860,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 486.310 585.590 486.590 589.590 ;
+        RECT 470.210 568.430 470.490 572.430 ;
     END
   END ones[7]
   PIN ones[8]
@@ -868,7 +868,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 474.350 585.590 474.630 589.590 ;
+        RECT 458.710 568.430 458.990 572.430 ;
     END
   END ones[8]
   PIN ones[9]
@@ -876,7 +876,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 462.390 585.590 462.670 589.590 ;
+        RECT 447.210 568.430 447.490 572.430 ;
     END
   END ones[9]
   PIN vccd1
@@ -884,19 +884,19 @@ MACRO top_ew_algofoogle
     USE POWER ;
     PORT
       LAYER met4 ;
-        RECT 21.040 10.640 22.640 576.880 ;
+        RECT 21.040 10.640 22.640 560.560 ;
     END
     PORT
       LAYER met4 ;
-        RECT 174.640 10.640 176.240 576.880 ;
+        RECT 174.640 10.640 176.240 560.560 ;
     END
     PORT
       LAYER met4 ;
-        RECT 328.240 10.640 329.840 576.880 ;
+        RECT 328.240 10.640 329.840 560.560 ;
     END
     PORT
       LAYER met4 ;
-        RECT 481.840 10.640 483.440 576.880 ;
+        RECT 481.840 10.640 483.440 560.560 ;
     END
   END vccd1
   PIN vssd1
@@ -904,19 +904,15 @@ MACRO top_ew_algofoogle
     USE GROUND ;
     PORT
       LAYER met4 ;
-        RECT 97.840 10.640 99.440 576.880 ;
+        RECT 97.840 10.640 99.440 560.560 ;
     END
     PORT
       LAYER met4 ;
-        RECT 251.440 10.640 253.040 576.880 ;
+        RECT 251.440 10.640 253.040 560.560 ;
     END
     PORT
       LAYER met4 ;
-        RECT 405.040 10.640 406.640 576.880 ;
-    END
-    PORT
-      LAYER met4 ;
-        RECT 558.640 10.640 560.240 576.880 ;
+        RECT 405.040 10.640 406.640 560.560 ;
     END
   END vssd1
   PIN zeros[0]
@@ -924,7 +920,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 378.670 585.590 378.950 589.590 ;
+        RECT 366.710 568.430 366.990 572.430 ;
     END
   END zeros[0]
   PIN zeros[10]
@@ -932,7 +928,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 259.070 585.590 259.350 589.590 ;
+        RECT 251.710 568.430 251.990 572.430 ;
     END
   END zeros[10]
   PIN zeros[11]
@@ -940,7 +936,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 247.110 585.590 247.390 589.590 ;
+        RECT 240.210 568.430 240.490 572.430 ;
     END
   END zeros[11]
   PIN zeros[12]
@@ -948,7 +944,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 235.150 585.590 235.430 589.590 ;
+        RECT 228.710 568.430 228.990 572.430 ;
     END
   END zeros[12]
   PIN zeros[13]
@@ -956,7 +952,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 223.190 585.590 223.470 589.590 ;
+        RECT 217.210 568.430 217.490 572.430 ;
     END
   END zeros[13]
   PIN zeros[14]
@@ -964,7 +960,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 211.230 585.590 211.510 589.590 ;
+        RECT 205.710 568.430 205.990 572.430 ;
     END
   END zeros[14]
   PIN zeros[15]
@@ -972,7 +968,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 199.270 585.590 199.550 589.590 ;
+        RECT 194.210 568.430 194.490 572.430 ;
     END
   END zeros[15]
   PIN zeros[1]
@@ -980,7 +976,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 366.710 585.590 366.990 589.590 ;
+        RECT 355.210 568.430 355.490 572.430 ;
     END
   END zeros[1]
   PIN zeros[2]
@@ -988,7 +984,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 354.750 585.590 355.030 589.590 ;
+        RECT 343.710 568.430 343.990 572.430 ;
     END
   END zeros[2]
   PIN zeros[3]
@@ -996,7 +992,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 342.790 585.590 343.070 589.590 ;
+        RECT 332.210 568.430 332.490 572.430 ;
     END
   END zeros[3]
   PIN zeros[4]
@@ -1004,7 +1000,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 330.830 585.590 331.110 589.590 ;
+        RECT 320.710 568.430 320.990 572.430 ;
     END
   END zeros[4]
   PIN zeros[5]
@@ -1012,7 +1008,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 318.870 585.590 319.150 589.590 ;
+        RECT 309.210 568.430 309.490 572.430 ;
     END
   END zeros[5]
   PIN zeros[6]
@@ -1020,7 +1016,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 306.910 585.590 307.190 589.590 ;
+        RECT 297.710 568.430 297.990 572.430 ;
     END
   END zeros[6]
   PIN zeros[7]
@@ -1028,7 +1024,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 294.950 585.590 295.230 589.590 ;
+        RECT 286.210 568.430 286.490 572.430 ;
     END
   END zeros[7]
   PIN zeros[8]
@@ -1036,7 +1032,7 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 282.990 585.590 283.270 589.590 ;
+        RECT 274.710 568.430 274.990 572.430 ;
     END
   END zeros[8]
   PIN zeros[9]
@@ -1044,296 +1040,292 @@ MACRO top_ew_algofoogle
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 271.030 585.590 271.310 589.590 ;
+        RECT 263.210 568.430 263.490 572.430 ;
     END
   END zeros[9]
   OBS
       LAYER nwell ;
-        RECT 5.330 572.505 573.350 575.335 ;
-        RECT 5.330 567.065 573.350 569.895 ;
-        RECT 5.330 561.625 573.350 564.455 ;
-        RECT 5.330 556.185 573.350 559.015 ;
-        RECT 5.330 550.745 573.350 553.575 ;
-        RECT 5.330 545.305 573.350 548.135 ;
-        RECT 5.330 539.865 573.350 542.695 ;
-        RECT 5.330 534.425 573.350 537.255 ;
-        RECT 5.330 528.985 573.350 531.815 ;
-        RECT 5.330 523.545 573.350 526.375 ;
-        RECT 5.330 518.105 573.350 520.935 ;
-        RECT 5.330 512.665 573.350 515.495 ;
-        RECT 5.330 507.225 573.350 510.055 ;
-        RECT 5.330 501.785 573.350 504.615 ;
-        RECT 5.330 496.345 573.350 499.175 ;
-        RECT 5.330 490.905 573.350 493.735 ;
-        RECT 5.330 485.465 573.350 488.295 ;
-        RECT 5.330 480.025 573.350 482.855 ;
-        RECT 5.330 474.585 573.350 477.415 ;
-        RECT 5.330 469.145 573.350 471.975 ;
-        RECT 5.330 463.705 573.350 466.535 ;
-        RECT 5.330 458.265 573.350 461.095 ;
-        RECT 5.330 452.825 573.350 455.655 ;
-        RECT 5.330 447.385 573.350 450.215 ;
-        RECT 5.330 441.945 573.350 444.775 ;
-        RECT 5.330 436.505 573.350 439.335 ;
-        RECT 5.330 431.065 573.350 433.895 ;
-        RECT 5.330 425.625 573.350 428.455 ;
-        RECT 5.330 420.185 573.350 423.015 ;
-        RECT 5.330 414.745 573.350 417.575 ;
-        RECT 5.330 409.305 573.350 412.135 ;
-        RECT 5.330 403.865 573.350 406.695 ;
-        RECT 5.330 398.425 573.350 401.255 ;
-        RECT 5.330 392.985 573.350 395.815 ;
-        RECT 5.330 387.545 573.350 390.375 ;
-        RECT 5.330 382.105 573.350 384.935 ;
-        RECT 5.330 376.665 573.350 379.495 ;
-        RECT 5.330 371.225 573.350 374.055 ;
-        RECT 5.330 365.785 573.350 368.615 ;
-        RECT 5.330 360.345 573.350 363.175 ;
-        RECT 5.330 354.905 573.350 357.735 ;
-        RECT 5.330 349.465 573.350 352.295 ;
-        RECT 5.330 344.025 573.350 346.855 ;
-        RECT 5.330 338.585 573.350 341.415 ;
-        RECT 5.330 333.145 573.350 335.975 ;
-        RECT 5.330 327.705 573.350 330.535 ;
-        RECT 5.330 322.265 573.350 325.095 ;
-        RECT 5.330 316.825 573.350 319.655 ;
-        RECT 5.330 311.385 573.350 314.215 ;
-        RECT 5.330 305.945 573.350 308.775 ;
-        RECT 5.330 300.505 573.350 303.335 ;
-        RECT 5.330 295.065 573.350 297.895 ;
-        RECT 5.330 289.625 573.350 292.455 ;
-        RECT 5.330 284.185 573.350 287.015 ;
-        RECT 5.330 278.745 573.350 281.575 ;
-        RECT 5.330 273.305 573.350 276.135 ;
-        RECT 5.330 267.865 573.350 270.695 ;
-        RECT 5.330 262.425 573.350 265.255 ;
-        RECT 5.330 256.985 573.350 259.815 ;
-        RECT 5.330 251.545 573.350 254.375 ;
-        RECT 5.330 246.105 573.350 248.935 ;
-        RECT 5.330 240.665 573.350 243.495 ;
-        RECT 5.330 235.225 573.350 238.055 ;
-        RECT 5.330 229.785 573.350 232.615 ;
-        RECT 5.330 224.345 573.350 227.175 ;
-        RECT 5.330 218.905 573.350 221.735 ;
-        RECT 5.330 213.465 573.350 216.295 ;
-        RECT 5.330 208.025 573.350 210.855 ;
-        RECT 5.330 202.585 573.350 205.415 ;
-        RECT 5.330 197.145 573.350 199.975 ;
-        RECT 5.330 191.705 573.350 194.535 ;
-        RECT 5.330 186.265 573.350 189.095 ;
-        RECT 5.330 180.825 573.350 183.655 ;
-        RECT 5.330 175.385 573.350 178.215 ;
-        RECT 5.330 169.945 573.350 172.775 ;
-        RECT 5.330 164.505 573.350 167.335 ;
-        RECT 5.330 159.065 573.350 161.895 ;
-        RECT 5.330 153.625 573.350 156.455 ;
-        RECT 5.330 148.185 573.350 151.015 ;
-        RECT 5.330 142.745 573.350 145.575 ;
-        RECT 5.330 137.305 573.350 140.135 ;
-        RECT 5.330 131.865 573.350 134.695 ;
-        RECT 5.330 126.425 573.350 129.255 ;
-        RECT 5.330 120.985 573.350 123.815 ;
-        RECT 5.330 115.545 573.350 118.375 ;
-        RECT 5.330 110.105 573.350 112.935 ;
-        RECT 5.330 104.665 573.350 107.495 ;
-        RECT 5.330 99.225 573.350 102.055 ;
-        RECT 5.330 93.785 573.350 96.615 ;
-        RECT 5.330 88.345 573.350 91.175 ;
-        RECT 5.330 82.905 573.350 85.735 ;
-        RECT 5.330 77.465 573.350 80.295 ;
-        RECT 5.330 72.025 573.350 74.855 ;
-        RECT 5.330 66.585 573.350 69.415 ;
-        RECT 5.330 61.145 573.350 63.975 ;
-        RECT 5.330 55.705 573.350 58.535 ;
-        RECT 5.330 50.265 573.350 53.095 ;
-        RECT 5.330 44.825 573.350 47.655 ;
-        RECT 5.330 39.385 573.350 42.215 ;
-        RECT 5.330 33.945 573.350 36.775 ;
-        RECT 5.330 28.505 573.350 31.335 ;
-        RECT 5.330 23.065 573.350 25.895 ;
-        RECT 5.330 17.625 573.350 20.455 ;
-        RECT 5.330 12.185 573.350 15.015 ;
+        RECT 5.330 556.185 556.330 559.015 ;
+        RECT 5.330 550.745 556.330 553.575 ;
+        RECT 5.330 545.305 556.330 548.135 ;
+        RECT 5.330 539.865 556.330 542.695 ;
+        RECT 5.330 534.425 556.330 537.255 ;
+        RECT 5.330 528.985 556.330 531.815 ;
+        RECT 5.330 523.545 556.330 526.375 ;
+        RECT 5.330 518.105 556.330 520.935 ;
+        RECT 5.330 512.665 556.330 515.495 ;
+        RECT 5.330 507.225 556.330 510.055 ;
+        RECT 5.330 501.785 556.330 504.615 ;
+        RECT 5.330 496.345 556.330 499.175 ;
+        RECT 5.330 490.905 556.330 493.735 ;
+        RECT 5.330 485.465 556.330 488.295 ;
+        RECT 5.330 480.025 556.330 482.855 ;
+        RECT 5.330 474.585 556.330 477.415 ;
+        RECT 5.330 469.145 556.330 471.975 ;
+        RECT 5.330 463.705 556.330 466.535 ;
+        RECT 5.330 458.265 556.330 461.095 ;
+        RECT 5.330 452.825 556.330 455.655 ;
+        RECT 5.330 447.385 556.330 450.215 ;
+        RECT 5.330 441.945 556.330 444.775 ;
+        RECT 5.330 436.505 556.330 439.335 ;
+        RECT 5.330 431.065 556.330 433.895 ;
+        RECT 5.330 425.625 556.330 428.455 ;
+        RECT 5.330 420.185 556.330 423.015 ;
+        RECT 5.330 414.745 556.330 417.575 ;
+        RECT 5.330 409.305 556.330 412.135 ;
+        RECT 5.330 403.865 556.330 406.695 ;
+        RECT 5.330 398.425 556.330 401.255 ;
+        RECT 5.330 392.985 556.330 395.815 ;
+        RECT 5.330 387.545 556.330 390.375 ;
+        RECT 5.330 382.105 556.330 384.935 ;
+        RECT 5.330 376.665 556.330 379.495 ;
+        RECT 5.330 371.225 556.330 374.055 ;
+        RECT 5.330 365.785 556.330 368.615 ;
+        RECT 5.330 360.345 556.330 363.175 ;
+        RECT 5.330 354.905 556.330 357.735 ;
+        RECT 5.330 349.465 556.330 352.295 ;
+        RECT 5.330 344.025 556.330 346.855 ;
+        RECT 5.330 338.585 556.330 341.415 ;
+        RECT 5.330 333.145 556.330 335.975 ;
+        RECT 5.330 327.705 556.330 330.535 ;
+        RECT 5.330 322.265 556.330 325.095 ;
+        RECT 5.330 316.825 556.330 319.655 ;
+        RECT 5.330 311.385 556.330 314.215 ;
+        RECT 5.330 305.945 556.330 308.775 ;
+        RECT 5.330 300.505 556.330 303.335 ;
+        RECT 5.330 295.065 556.330 297.895 ;
+        RECT 5.330 289.625 556.330 292.455 ;
+        RECT 5.330 284.185 556.330 287.015 ;
+        RECT 5.330 278.745 556.330 281.575 ;
+        RECT 5.330 273.305 556.330 276.135 ;
+        RECT 5.330 267.865 556.330 270.695 ;
+        RECT 5.330 262.425 556.330 265.255 ;
+        RECT 5.330 256.985 556.330 259.815 ;
+        RECT 5.330 251.545 556.330 254.375 ;
+        RECT 5.330 246.105 556.330 248.935 ;
+        RECT 5.330 240.665 556.330 243.495 ;
+        RECT 5.330 235.225 556.330 238.055 ;
+        RECT 5.330 229.785 556.330 232.615 ;
+        RECT 5.330 224.345 556.330 227.175 ;
+        RECT 5.330 218.905 556.330 221.735 ;
+        RECT 5.330 213.465 556.330 216.295 ;
+        RECT 5.330 208.025 556.330 210.855 ;
+        RECT 5.330 202.585 556.330 205.415 ;
+        RECT 5.330 197.145 556.330 199.975 ;
+        RECT 5.330 191.705 556.330 194.535 ;
+        RECT 5.330 186.265 556.330 189.095 ;
+        RECT 5.330 180.825 556.330 183.655 ;
+        RECT 5.330 175.385 556.330 178.215 ;
+        RECT 5.330 169.945 556.330 172.775 ;
+        RECT 5.330 164.505 556.330 167.335 ;
+        RECT 5.330 159.065 556.330 161.895 ;
+        RECT 5.330 153.625 556.330 156.455 ;
+        RECT 5.330 148.185 556.330 151.015 ;
+        RECT 5.330 142.745 556.330 145.575 ;
+        RECT 5.330 137.305 556.330 140.135 ;
+        RECT 5.330 131.865 556.330 134.695 ;
+        RECT 5.330 126.425 556.330 129.255 ;
+        RECT 5.330 120.985 556.330 123.815 ;
+        RECT 5.330 115.545 556.330 118.375 ;
+        RECT 5.330 110.105 556.330 112.935 ;
+        RECT 5.330 104.665 556.330 107.495 ;
+        RECT 5.330 99.225 556.330 102.055 ;
+        RECT 5.330 93.785 556.330 96.615 ;
+        RECT 5.330 88.345 556.330 91.175 ;
+        RECT 5.330 82.905 556.330 85.735 ;
+        RECT 5.330 77.465 556.330 80.295 ;
+        RECT 5.330 72.025 556.330 74.855 ;
+        RECT 5.330 66.585 556.330 69.415 ;
+        RECT 5.330 61.145 556.330 63.975 ;
+        RECT 5.330 55.705 556.330 58.535 ;
+        RECT 5.330 50.265 556.330 53.095 ;
+        RECT 5.330 44.825 556.330 47.655 ;
+        RECT 5.330 39.385 556.330 42.215 ;
+        RECT 5.330 33.945 556.330 36.775 ;
+        RECT 5.330 28.505 556.330 31.335 ;
+        RECT 5.330 23.065 556.330 25.895 ;
+        RECT 5.330 17.625 556.330 20.455 ;
+        RECT 5.330 12.185 556.330 15.015 ;
       LAYER li1 ;
-        RECT 5.520 10.795 573.160 576.725 ;
+        RECT 5.520 10.795 556.140 560.405 ;
       LAYER met1 ;
-        RECT 5.520 10.640 573.460 577.280 ;
+        RECT 5.520 9.560 556.140 560.560 ;
       LAYER met2 ;
-        RECT 8.470 585.310 19.590 585.590 ;
-        RECT 20.430 585.310 31.550 585.590 ;
-        RECT 32.390 585.310 43.510 585.590 ;
-        RECT 44.350 585.310 55.470 585.590 ;
-        RECT 56.310 585.310 67.430 585.590 ;
-        RECT 68.270 585.310 79.390 585.590 ;
-        RECT 80.230 585.310 91.350 585.590 ;
-        RECT 92.190 585.310 103.310 585.590 ;
-        RECT 104.150 585.310 115.270 585.590 ;
-        RECT 116.110 585.310 127.230 585.590 ;
-        RECT 128.070 585.310 139.190 585.590 ;
-        RECT 140.030 585.310 151.150 585.590 ;
-        RECT 151.990 585.310 163.110 585.590 ;
-        RECT 163.950 585.310 175.070 585.590 ;
-        RECT 175.910 585.310 187.030 585.590 ;
-        RECT 187.870 585.310 198.990 585.590 ;
-        RECT 199.830 585.310 210.950 585.590 ;
-        RECT 211.790 585.310 222.910 585.590 ;
-        RECT 223.750 585.310 234.870 585.590 ;
-        RECT 235.710 585.310 246.830 585.590 ;
-        RECT 247.670 585.310 258.790 585.590 ;
-        RECT 259.630 585.310 270.750 585.590 ;
-        RECT 271.590 585.310 282.710 585.590 ;
-        RECT 283.550 585.310 294.670 585.590 ;
-        RECT 295.510 585.310 306.630 585.590 ;
-        RECT 307.470 585.310 318.590 585.590 ;
-        RECT 319.430 585.310 330.550 585.590 ;
-        RECT 331.390 585.310 342.510 585.590 ;
-        RECT 343.350 585.310 354.470 585.590 ;
-        RECT 355.310 585.310 366.430 585.590 ;
-        RECT 367.270 585.310 378.390 585.590 ;
-        RECT 379.230 585.310 390.350 585.590 ;
-        RECT 391.190 585.310 402.310 585.590 ;
-        RECT 403.150 585.310 414.270 585.590 ;
-        RECT 415.110 585.310 426.230 585.590 ;
-        RECT 427.070 585.310 438.190 585.590 ;
-        RECT 439.030 585.310 450.150 585.590 ;
-        RECT 450.990 585.310 462.110 585.590 ;
-        RECT 462.950 585.310 474.070 585.590 ;
-        RECT 474.910 585.310 486.030 585.590 ;
-        RECT 486.870 585.310 497.990 585.590 ;
-        RECT 498.830 585.310 509.950 585.590 ;
-        RECT 510.790 585.310 521.910 585.590 ;
-        RECT 522.750 585.310 533.870 585.590 ;
-        RECT 534.710 585.310 545.830 585.590 ;
-        RECT 546.670 585.310 557.790 585.590 ;
-        RECT 558.630 585.310 569.750 585.590 ;
-        RECT 570.590 585.310 571.680 585.590 ;
-        RECT 7.920 4.280 571.680 585.310 ;
-        RECT 7.920 4.000 8.090 4.280 ;
-        RECT 8.930 4.000 23.270 4.280 ;
-        RECT 24.110 4.000 38.450 4.280 ;
-        RECT 39.290 4.000 53.630 4.280 ;
-        RECT 54.470 4.000 68.810 4.280 ;
-        RECT 69.650 4.000 83.990 4.280 ;
-        RECT 84.830 4.000 99.170 4.280 ;
-        RECT 100.010 4.000 114.350 4.280 ;
-        RECT 115.190 4.000 129.530 4.280 ;
-        RECT 130.370 4.000 144.710 4.280 ;
-        RECT 145.550 4.000 159.890 4.280 ;
-        RECT 160.730 4.000 175.070 4.280 ;
-        RECT 175.910 4.000 190.250 4.280 ;
-        RECT 191.090 4.000 205.430 4.280 ;
-        RECT 206.270 4.000 220.610 4.280 ;
-        RECT 221.450 4.000 235.790 4.280 ;
-        RECT 236.630 4.000 250.970 4.280 ;
-        RECT 251.810 4.000 266.150 4.280 ;
-        RECT 266.990 4.000 281.330 4.280 ;
-        RECT 282.170 4.000 296.510 4.280 ;
-        RECT 297.350 4.000 311.690 4.280 ;
-        RECT 312.530 4.000 326.870 4.280 ;
-        RECT 327.710 4.000 342.050 4.280 ;
-        RECT 342.890 4.000 357.230 4.280 ;
-        RECT 358.070 4.000 372.410 4.280 ;
-        RECT 373.250 4.000 387.590 4.280 ;
-        RECT 388.430 4.000 402.770 4.280 ;
-        RECT 403.610 4.000 417.950 4.280 ;
-        RECT 418.790 4.000 433.130 4.280 ;
-        RECT 433.970 4.000 448.310 4.280 ;
-        RECT 449.150 4.000 463.490 4.280 ;
-        RECT 464.330 4.000 478.670 4.280 ;
-        RECT 479.510 4.000 493.850 4.280 ;
-        RECT 494.690 4.000 509.030 4.280 ;
-        RECT 509.870 4.000 524.210 4.280 ;
-        RECT 525.050 4.000 539.390 4.280 ;
-        RECT 540.230 4.000 554.570 4.280 ;
-        RECT 555.410 4.000 569.750 4.280 ;
-        RECT 570.590 4.000 571.680 4.280 ;
+        RECT 8.380 568.150 9.930 568.890 ;
+        RECT 10.770 568.150 21.430 568.890 ;
+        RECT 22.270 568.150 32.930 568.890 ;
+        RECT 33.770 568.150 44.430 568.890 ;
+        RECT 45.270 568.150 55.930 568.890 ;
+        RECT 56.770 568.150 67.430 568.890 ;
+        RECT 68.270 568.150 78.930 568.890 ;
+        RECT 79.770 568.150 90.430 568.890 ;
+        RECT 91.270 568.150 101.930 568.890 ;
+        RECT 102.770 568.150 113.430 568.890 ;
+        RECT 114.270 568.150 124.930 568.890 ;
+        RECT 125.770 568.150 136.430 568.890 ;
+        RECT 137.270 568.150 147.930 568.890 ;
+        RECT 148.770 568.150 159.430 568.890 ;
+        RECT 160.270 568.150 170.930 568.890 ;
+        RECT 171.770 568.150 182.430 568.890 ;
+        RECT 183.270 568.150 193.930 568.890 ;
+        RECT 194.770 568.150 205.430 568.890 ;
+        RECT 206.270 568.150 216.930 568.890 ;
+        RECT 217.770 568.150 228.430 568.890 ;
+        RECT 229.270 568.150 239.930 568.890 ;
+        RECT 240.770 568.150 251.430 568.890 ;
+        RECT 252.270 568.150 262.930 568.890 ;
+        RECT 263.770 568.150 274.430 568.890 ;
+        RECT 275.270 568.150 285.930 568.890 ;
+        RECT 286.770 568.150 297.430 568.890 ;
+        RECT 298.270 568.150 308.930 568.890 ;
+        RECT 309.770 568.150 320.430 568.890 ;
+        RECT 321.270 568.150 331.930 568.890 ;
+        RECT 332.770 568.150 343.430 568.890 ;
+        RECT 344.270 568.150 354.930 568.890 ;
+        RECT 355.770 568.150 366.430 568.890 ;
+        RECT 367.270 568.150 377.930 568.890 ;
+        RECT 378.770 568.150 389.430 568.890 ;
+        RECT 390.270 568.150 400.930 568.890 ;
+        RECT 401.770 568.150 412.430 568.890 ;
+        RECT 413.270 568.150 423.930 568.890 ;
+        RECT 424.770 568.150 435.430 568.890 ;
+        RECT 436.270 568.150 446.930 568.890 ;
+        RECT 447.770 568.150 458.430 568.890 ;
+        RECT 459.270 568.150 469.930 568.890 ;
+        RECT 470.770 568.150 481.430 568.890 ;
+        RECT 482.270 568.150 492.930 568.890 ;
+        RECT 493.770 568.150 504.430 568.890 ;
+        RECT 505.270 568.150 515.930 568.890 ;
+        RECT 516.770 568.150 527.430 568.890 ;
+        RECT 528.270 568.150 538.930 568.890 ;
+        RECT 539.770 568.150 550.430 568.890 ;
+        RECT 551.270 568.150 554.660 568.890 ;
+        RECT 8.380 4.280 554.660 568.150 ;
+        RECT 8.930 3.670 22.810 4.280 ;
+        RECT 23.650 3.670 37.530 4.280 ;
+        RECT 38.370 3.670 52.250 4.280 ;
+        RECT 53.090 3.670 66.970 4.280 ;
+        RECT 67.810 3.670 81.690 4.280 ;
+        RECT 82.530 3.670 96.410 4.280 ;
+        RECT 97.250 3.670 111.130 4.280 ;
+        RECT 111.970 3.670 125.850 4.280 ;
+        RECT 126.690 3.670 140.570 4.280 ;
+        RECT 141.410 3.670 155.290 4.280 ;
+        RECT 156.130 3.670 170.010 4.280 ;
+        RECT 170.850 3.670 184.730 4.280 ;
+        RECT 185.570 3.670 199.450 4.280 ;
+        RECT 200.290 3.670 214.170 4.280 ;
+        RECT 215.010 3.670 228.890 4.280 ;
+        RECT 229.730 3.670 243.610 4.280 ;
+        RECT 244.450 3.670 258.330 4.280 ;
+        RECT 259.170 3.670 273.050 4.280 ;
+        RECT 273.890 3.670 287.770 4.280 ;
+        RECT 288.610 3.670 302.490 4.280 ;
+        RECT 303.330 3.670 317.210 4.280 ;
+        RECT 318.050 3.670 331.930 4.280 ;
+        RECT 332.770 3.670 346.650 4.280 ;
+        RECT 347.490 3.670 361.370 4.280 ;
+        RECT 362.210 3.670 376.090 4.280 ;
+        RECT 376.930 3.670 390.810 4.280 ;
+        RECT 391.650 3.670 405.530 4.280 ;
+        RECT 406.370 3.670 420.250 4.280 ;
+        RECT 421.090 3.670 434.970 4.280 ;
+        RECT 435.810 3.670 449.690 4.280 ;
+        RECT 450.530 3.670 464.410 4.280 ;
+        RECT 465.250 3.670 479.130 4.280 ;
+        RECT 479.970 3.670 493.850 4.280 ;
+        RECT 494.690 3.670 508.570 4.280 ;
+        RECT 509.410 3.670 523.290 4.280 ;
+        RECT 524.130 3.670 538.010 4.280 ;
+        RECT 538.850 3.670 552.730 4.280 ;
+        RECT 553.570 3.670 554.660 4.280 ;
       LAYER met3 ;
-        RECT 21.050 578.320 574.470 579.185 ;
-        RECT 21.050 564.760 574.870 578.320 ;
-        RECT 21.050 563.360 574.470 564.760 ;
-        RECT 21.050 549.800 574.870 563.360 ;
-        RECT 21.050 548.400 574.470 549.800 ;
-        RECT 21.050 534.840 574.870 548.400 ;
-        RECT 21.050 533.440 574.470 534.840 ;
-        RECT 21.050 519.880 574.870 533.440 ;
-        RECT 21.050 518.480 574.470 519.880 ;
-        RECT 21.050 504.920 574.870 518.480 ;
-        RECT 21.050 503.520 574.470 504.920 ;
-        RECT 21.050 489.960 574.870 503.520 ;
-        RECT 21.050 488.560 574.470 489.960 ;
-        RECT 21.050 475.000 574.870 488.560 ;
-        RECT 21.050 473.600 574.470 475.000 ;
-        RECT 21.050 460.040 574.870 473.600 ;
-        RECT 21.050 458.640 574.470 460.040 ;
-        RECT 21.050 445.080 574.870 458.640 ;
-        RECT 21.050 443.680 574.470 445.080 ;
-        RECT 21.050 430.120 574.870 443.680 ;
-        RECT 21.050 428.720 574.470 430.120 ;
-        RECT 21.050 415.160 574.870 428.720 ;
-        RECT 21.050 413.760 574.470 415.160 ;
-        RECT 21.050 400.200 574.870 413.760 ;
-        RECT 21.050 398.800 574.470 400.200 ;
-        RECT 21.050 385.240 574.870 398.800 ;
-        RECT 21.050 383.840 574.470 385.240 ;
-        RECT 21.050 370.280 574.870 383.840 ;
-        RECT 21.050 368.880 574.470 370.280 ;
-        RECT 21.050 355.320 574.870 368.880 ;
-        RECT 21.050 353.920 574.470 355.320 ;
-        RECT 21.050 340.360 574.870 353.920 ;
-        RECT 21.050 338.960 574.470 340.360 ;
-        RECT 21.050 325.400 574.870 338.960 ;
-        RECT 21.050 324.000 574.470 325.400 ;
-        RECT 21.050 310.440 574.870 324.000 ;
-        RECT 21.050 309.040 574.470 310.440 ;
-        RECT 21.050 295.480 574.870 309.040 ;
-        RECT 21.050 294.080 574.470 295.480 ;
-        RECT 21.050 280.520 574.870 294.080 ;
-        RECT 21.050 279.120 574.470 280.520 ;
-        RECT 21.050 265.560 574.870 279.120 ;
-        RECT 21.050 264.160 574.470 265.560 ;
-        RECT 21.050 250.600 574.870 264.160 ;
-        RECT 21.050 249.200 574.470 250.600 ;
-        RECT 21.050 235.640 574.870 249.200 ;
-        RECT 21.050 234.240 574.470 235.640 ;
-        RECT 21.050 220.680 574.870 234.240 ;
-        RECT 21.050 219.280 574.470 220.680 ;
-        RECT 21.050 205.720 574.870 219.280 ;
-        RECT 21.050 204.320 574.470 205.720 ;
-        RECT 21.050 190.760 574.870 204.320 ;
-        RECT 21.050 189.360 574.470 190.760 ;
-        RECT 21.050 175.800 574.870 189.360 ;
-        RECT 21.050 174.400 574.470 175.800 ;
-        RECT 21.050 160.840 574.870 174.400 ;
-        RECT 21.050 159.440 574.470 160.840 ;
-        RECT 21.050 145.880 574.870 159.440 ;
-        RECT 21.050 144.480 574.470 145.880 ;
-        RECT 21.050 130.920 574.870 144.480 ;
-        RECT 21.050 129.520 574.470 130.920 ;
-        RECT 21.050 115.960 574.870 129.520 ;
-        RECT 21.050 114.560 574.470 115.960 ;
-        RECT 21.050 101.000 574.870 114.560 ;
-        RECT 21.050 99.600 574.470 101.000 ;
-        RECT 21.050 86.040 574.870 99.600 ;
-        RECT 21.050 84.640 574.470 86.040 ;
-        RECT 21.050 71.080 574.870 84.640 ;
-        RECT 21.050 69.680 574.470 71.080 ;
-        RECT 21.050 56.120 574.870 69.680 ;
-        RECT 21.050 54.720 574.470 56.120 ;
-        RECT 21.050 41.160 574.870 54.720 ;
-        RECT 21.050 39.760 574.470 41.160 ;
-        RECT 21.050 26.200 574.870 39.760 ;
-        RECT 21.050 24.800 574.470 26.200 ;
-        RECT 21.050 11.240 574.870 24.800 ;
-        RECT 21.050 9.840 574.470 11.240 ;
-        RECT 21.050 9.695 574.870 9.840 ;
+        RECT 21.050 557.960 557.710 560.485 ;
+        RECT 21.050 556.560 557.310 557.960 ;
+        RECT 21.050 543.680 557.710 556.560 ;
+        RECT 21.050 542.280 557.310 543.680 ;
+        RECT 21.050 529.400 557.710 542.280 ;
+        RECT 21.050 528.000 557.310 529.400 ;
+        RECT 21.050 515.120 557.710 528.000 ;
+        RECT 21.050 513.720 557.310 515.120 ;
+        RECT 21.050 500.840 557.710 513.720 ;
+        RECT 21.050 499.440 557.310 500.840 ;
+        RECT 21.050 486.560 557.710 499.440 ;
+        RECT 21.050 485.160 557.310 486.560 ;
+        RECT 21.050 472.280 557.710 485.160 ;
+        RECT 21.050 470.880 557.310 472.280 ;
+        RECT 21.050 458.000 557.710 470.880 ;
+        RECT 21.050 456.600 557.310 458.000 ;
+        RECT 21.050 443.720 557.710 456.600 ;
+        RECT 21.050 442.320 557.310 443.720 ;
+        RECT 21.050 429.440 557.710 442.320 ;
+        RECT 21.050 428.040 557.310 429.440 ;
+        RECT 21.050 415.160 557.710 428.040 ;
+        RECT 21.050 413.760 557.310 415.160 ;
+        RECT 21.050 400.880 557.710 413.760 ;
+        RECT 21.050 399.480 557.310 400.880 ;
+        RECT 21.050 386.600 557.710 399.480 ;
+        RECT 21.050 385.200 557.310 386.600 ;
+        RECT 21.050 372.320 557.710 385.200 ;
+        RECT 21.050 370.920 557.310 372.320 ;
+        RECT 21.050 358.040 557.710 370.920 ;
+        RECT 21.050 356.640 557.310 358.040 ;
+        RECT 21.050 343.760 557.710 356.640 ;
+        RECT 21.050 342.360 557.310 343.760 ;
+        RECT 21.050 329.480 557.710 342.360 ;
+        RECT 21.050 328.080 557.310 329.480 ;
+        RECT 21.050 315.200 557.710 328.080 ;
+        RECT 21.050 313.800 557.310 315.200 ;
+        RECT 21.050 300.920 557.710 313.800 ;
+        RECT 21.050 299.520 557.310 300.920 ;
+        RECT 21.050 286.640 557.710 299.520 ;
+        RECT 21.050 285.240 557.310 286.640 ;
+        RECT 21.050 272.360 557.710 285.240 ;
+        RECT 21.050 270.960 557.310 272.360 ;
+        RECT 21.050 258.080 557.710 270.960 ;
+        RECT 21.050 256.680 557.310 258.080 ;
+        RECT 21.050 243.800 557.710 256.680 ;
+        RECT 21.050 242.400 557.310 243.800 ;
+        RECT 21.050 229.520 557.710 242.400 ;
+        RECT 21.050 228.120 557.310 229.520 ;
+        RECT 21.050 215.240 557.710 228.120 ;
+        RECT 21.050 213.840 557.310 215.240 ;
+        RECT 21.050 200.960 557.710 213.840 ;
+        RECT 21.050 199.560 557.310 200.960 ;
+        RECT 21.050 186.680 557.710 199.560 ;
+        RECT 21.050 185.280 557.310 186.680 ;
+        RECT 21.050 172.400 557.710 185.280 ;
+        RECT 21.050 171.000 557.310 172.400 ;
+        RECT 21.050 158.120 557.710 171.000 ;
+        RECT 21.050 156.720 557.310 158.120 ;
+        RECT 21.050 143.840 557.710 156.720 ;
+        RECT 21.050 142.440 557.310 143.840 ;
+        RECT 21.050 129.560 557.710 142.440 ;
+        RECT 21.050 128.160 557.310 129.560 ;
+        RECT 21.050 115.280 557.710 128.160 ;
+        RECT 21.050 113.880 557.310 115.280 ;
+        RECT 21.050 101.000 557.710 113.880 ;
+        RECT 21.050 99.600 557.310 101.000 ;
+        RECT 21.050 86.720 557.710 99.600 ;
+        RECT 21.050 85.320 557.310 86.720 ;
+        RECT 21.050 72.440 557.710 85.320 ;
+        RECT 21.050 71.040 557.310 72.440 ;
+        RECT 21.050 58.160 557.710 71.040 ;
+        RECT 21.050 56.760 557.310 58.160 ;
+        RECT 21.050 43.880 557.710 56.760 ;
+        RECT 21.050 42.480 557.310 43.880 ;
+        RECT 21.050 29.600 557.710 42.480 ;
+        RECT 21.050 28.200 557.310 29.600 ;
+        RECT 21.050 15.320 557.710 28.200 ;
+        RECT 21.050 13.920 557.310 15.320 ;
+        RECT 21.050 10.715 557.710 13.920 ;
       LAYER met4 ;
-        RECT 78.495 10.240 97.440 566.945 ;
-        RECT 99.840 10.240 174.240 566.945 ;
-        RECT 176.640 10.240 251.040 566.945 ;
-        RECT 253.440 10.240 327.840 566.945 ;
-        RECT 330.240 10.240 404.640 566.945 ;
-        RECT 407.040 10.240 481.440 566.945 ;
-        RECT 483.840 10.240 492.825 566.945 ;
-        RECT 78.495 9.695 492.825 10.240 ;
+        RECT 115.295 12.415 174.240 559.465 ;
+        RECT 176.640 12.415 251.040 559.465 ;
+        RECT 253.440 12.415 327.840 559.465 ;
+        RECT 330.240 12.415 404.640 559.465 ;
+        RECT 407.040 12.415 481.440 559.465 ;
+        RECT 483.840 12.415 489.145 559.465 ;
   END
 END top_ew_algofoogle
 END LIBRARY
