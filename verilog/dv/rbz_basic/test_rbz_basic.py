@@ -92,10 +92,10 @@ async def test_all(dut):
                 b1 = dut.o_gpout1.value  # LA-overridden gpout1 is Blue high bit.
                 r0 = dut.o_gpout2.value  # LA-overridden gpout2 is Red low bit.
                 r1 = dut.o_gpout3.value  # LA-overridden gpout3 is Red high bit.
-                hsyncb = (0==dut.o_hsync.value)<<5
-                vsyncb = (0==dut.o_vsync.value)<<5
+                hsyncb = 255 if dut.o_hsync.value.binstr=='x' else (0==dut.o_hsync.value)*0b110000
+                vsyncb = 128 if dut.o_vsync.value.binstr=='x' else (0==dut.o_vsync.value)*0b110000
                 r = (r1<<7) | (r0<<6) | hsyncb
-                g = 0
+                g = 0 | vsyncb
                 b = (b1<<7) | (b0<<6)
             img.write(f"{r} {g} {b}\n")
             await ClockCycles(dut.clk, 1) 

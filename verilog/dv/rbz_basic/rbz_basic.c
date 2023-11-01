@@ -16,6 +16,7 @@ IO Control Registers
 
 void main()
 {
+
     // Signal via the SoC's single 'gpio' pin that we're starting our main code execution...
     // Start with gpio=0:
     reg_gpio_out = 0;
@@ -43,7 +44,7 @@ void main()
     reg_mprj_io_31  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[1]
     reg_mprj_io_32  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[2]
     reg_mprj_io_34  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // Texture SPI io[3]
-    reg_mprj_io_35  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // (Unused)
+    reg_mprj_io_35  = GPIO_MODE_USER_STD_INPUT_NOPULL;  // (Unused => i_spare_1)
     // Configure all other IOs that we don't care about to be inputs...
     //NOTE: We're skipping IOs that remain under normal SoC control.
     reg_mprj_io_8   = GPIO_MODE_USER_STD_INPUT_NOPULL;
@@ -67,9 +68,9 @@ void main()
     while (reg_mprj_xfer == 1);
 
     // Configure the LA outputs that we're sending into the design,
-    // i.e. LA[114:64]
+    // i.e. LA[115:64]
     reg_la2_oenb = reg_la2_iena = 0xffffffff; // Set 64..95 to outputs.
-    reg_la3_oenb = reg_la3_iena = 0x0007ffff; // Set 96..114 to outputs too.
+    reg_la3_oenb = reg_la3_iena = 0xffffffff; // Set 96..115 to outputs too.
     //NOTE: It's confusing, but setting an la_oenb to 1 enables its output,
     // while setting the corresponding iena to 1 DISables its INPUT,
     // which is why we do both assignments at the same time.
@@ -111,9 +112,10 @@ void main()
     // 48:47 i_mode[1:0] <= 11
     // 34:-- i_debug_map_overlay <= 1
     reg_la3_data =
-                  0b0011000000000000100;
-    // xxxxxxxxxxxxx-------------------     (unused LAs)
-    // -------------0------------------     i_tex_in[3]
+                 0b00011000000000000100;
+    // xxxxxxxxxxxx--------------------     (unused LAs)
+    // ------------0-------------------     i_spare_0
+    // -------------0------------------     i_reg_outs_enb (0=enable registered outputs)
     // --------------0-----------------     i_mode[2]: 0=SPI textures; 1=generated textures
     // ---------------1----------------     i_mode[1]: i_inc_py
     // ----------------1---------------     i_mode[0]: i_inc_px
