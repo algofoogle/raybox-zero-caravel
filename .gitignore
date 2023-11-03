@@ -6,6 +6,12 @@
 *.lst
 *.vcd
 *.gtkw
+/env
+/venv
+/caravel
+/dependencies
+/mgmt_core_wrapper
+/logs
 openlane-at*/
 openlane-base/
 

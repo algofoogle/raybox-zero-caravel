@@ -25,7 +25,10 @@
     
     "CLOCK_PORT": "i_clk",
     "CLOCK_NET": "top_ew_algofoogle.i_clk",
-    "CLOCK_PERIOD": 40.0,
+    "CLOCK_PERIOD": 38.0,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 1.50,
+    "GLB_RESIZER_HOLD_SLACK_MARGIN": 0.85,
+
     "DESIGN_IS_CORE": 0,
     "RT_MAX_LAYER": "met4",
     "VDD_NETS": ["vccd1"],

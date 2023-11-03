@@ -38,6 +38,12 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
+ wire \anton_io_oeb[4] ;
+ wire \anton_io_out[0] ;
+ wire \anton_io_out[1] ;
+ wire \anton_io_out[2] ;
+ wire \anton_io_out[3] ;
+ wire \anton_io_out[4] ;
  wire \a0s[10] ;
  wire \a0s[11] ;
  wire \a0s[12] ;
@@ -64,12 +70,6 @@ module user_project_wrapper (user_clock2,
  wire \a1s[9] ;
  wire \anton_gpout[4] ;
  wire \anton_gpout[5] ;
- wire \anton_io_oeb[4] ;
- wire \anton_io_out[0] ;
- wire \anton_io_out[1] ;
- wire \anton_io_out[2] ;
- wire \anton_io_out[3] ;
- wire \anton_io_out[4] ;
  wire anton_o_reset;
 
  top_ew_algofoogle top_ew_algofoogle (.i_clk(user_clock2),
