@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1699006376
+timestamp 1699030802
 << nwell >>
 rect 1066 116677 116326 116998
 rect 1066 115589 116326 116155
@@ -715,7 +715,7 @@ string FIXED_BBOX 0 0 117470 119614
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 32892248
-string GDS_FILE /home/zerotoasic/asic_tools/caravel_user_project/openlane/top_ew_algofoogle/runs/23_11_03_20_37/results/signoff/top_ew_algofoogle.magic.gds
+string GDS_FILE /home/zerotoasic/asic_tools/caravel_user_project/openlane/top_ew_algofoogle/runs/23_11_04_03_24/results/signoff/top_ew_algofoogle.magic.gds
 string GDS_START 1402734
 << end >>
 
