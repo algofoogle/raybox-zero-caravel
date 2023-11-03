@@ -62,7 +62,7 @@ async def test_all(dut):
     print("Running PLL test...")
     clock = Clock(dut.clk, 40, units="ns")
     cocotb.start_soon(clock.start())
-    for n in range(1,500):
+    for n in range(1,50000):
         await ClockCycles(dut.clk, 1000)
         print(f"{n*1000} clocks")
 
