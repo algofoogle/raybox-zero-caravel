@@ -139,7 +139,7 @@ void main()
 
 
     // === SET A NEW POV THAT WILL APPLY AT THE NEXT FRAME ===
-    
+
     // uint32_t pov[3] = {
     //     0b00110100000011000100101010001000, // 32
     //     0b10011111011001110000000110010000, // 32
@@ -174,6 +174,11 @@ void main()
     }
     reg_la2_data = (la2 = (la2 & ~0b11100)          | 0b00100); // /CS=1     Turn chip OFF again.
 
+
+    // === SET ONE OF OUR SPI 'REG' REGISTERS ('LEAK' IN THIS CASE) ===
+
+    //NOTE: With the POV update above, we might run out of time before the next VGA frame can process it,
+    // in which case the update will be delayed until the next frame.
 
     // Bit-bang a new LEAK value via reg SPI:
     ///                                                  +----- MOSI
