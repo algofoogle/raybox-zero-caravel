@@ -48,3 +48,6 @@ coco_test_gl: rbz_basic.hex
 
 	TESTCASE=test_start,test_all MODULE=test_rbz_basic vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 	! grep failure results.xml
+
+show:
+	gtkwave rbz_basic.vcd rbz_basic5.gtkw
