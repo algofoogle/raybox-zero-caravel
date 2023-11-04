@@ -91,9 +91,13 @@ module user_project_wrapper #(
     wire [3:0] shared_io_in = {io_in[35], io_in[34], /* skip 33 per EW */ io_in[32], io_in[31]};
 
     // Anton's assigned pads are IO[26:18]...
+    // Ellen has also permitted Anton to use IO[11] as another pad, and it will be used as Anton's clock source.
+    wire anton_clock_in = io_in[11]; //!!!NOTE!!!: If this becomes unavailable for some reason, put user_clock2 here instead.
+    assign io_oeb[11] = a1s[0]; // 1: Input.
+    assign io_out[11] = a0s[8]; // Irrelevant.
     // These allow easy renumbering of those pads, if necessary.
-    assign anton_io_in = io_in[26:18];      // Map the 'in' side of our 9 pads.
-    assign io_out[26:18] = anton_io_out;    // Map the 'out' side of our 9 pads.
+    assign anton_io_in = {io_in[26:18]};      // Map the 'in' side of our 10 pads.
+    assign io_out[26:18] = anton_io_out;    // Map the 'out' side of our 10 pads.
     assign io_oeb[26:18] = anton_io_oeb;    // Map the IO OEBs for our pads.
     // Convenience mapping of LA[115:64] to anton_la_in[51:0]. All are INPUTS INTO our module:
     wire [51:0] anton_la_in   = la_data_in[115:64];
@@ -119,8 +123,9 @@ module user_project_wrapper #(
         .vssd1(vssd1),        // User area 1 digital ground
     `endif
 
-        .i_clk                  (user_clock2),
-        .i_test_wb_clk_i        (wb_clk_i),
+        .i_clk                  (anton_clock_in),   //!!!NOTE!!!: If this becomes unavailable for some reason, put user_clock2 here instead.
+        .i_test_wci             (wb_clk_i),         // Not actually used as a clock source; just used for testing.
+        .i_test_uc2             (user_clock2),      // Not actually used as a clock source; just used for testing.
         .i_la_invalid           (anton_la_oenb[0]), // Check any one of our LA's OENBs. Should be 0 (i.e. driven by SoC) if valid.
         .i_reset_lock_a         (anton_la_in[0]),   // Hold design in reset if equal (both 0 or both 1)
         .i_reset_lock_b         (anton_la_in[1]),   // Hold design in reset if equal (both 0 or both 1)

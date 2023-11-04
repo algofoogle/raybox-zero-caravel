@@ -9,7 +9,8 @@ module rbz_basic_tb;
         #1;
     end
 
-    reg clk;
+    reg clk; // SoC main clock.
+    reg anton_clock; // Anton's external clock source on IO[11].
     reg RSTB;
     reg power1, power2;
     reg power3, power4;
@@ -24,6 +25,7 @@ module rbz_basic_tb;
     //SMELL: Should these be regs instead?
     // This is per EWSPEC SNIPPET2:
     // https://github.com/algofoogle/raybox-zero/blob/ew/doc/EWSPEC.md#if-9-pads-available-plus-extra-sharedmuxed-inputs
+    assign            mprj_io[11] = anton_clock;
     wire o_hsync    = mprj_io[18];
     wire o_vsync    = mprj_io[19];
     wire o_tex_csb  = mprj_io[20];
