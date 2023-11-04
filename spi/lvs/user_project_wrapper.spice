@@ -10,16 +10,16 @@
 + i_gpout4_sel[1] i_gpout4_sel[2] i_gpout4_sel[3] i_gpout4_sel[4] i_gpout4_sel[5]
 + i_gpout5_sel[0] i_gpout5_sel[1] i_gpout5_sel[2] i_gpout5_sel[3] i_gpout5_sel[4]
 + i_gpout5_sel[5] i_la_invalid i_mode[0] i_mode[1] i_mode[2] i_reg_csb i_reg_mosi
-+ i_reg_outs_enb i_reg_sclk i_reset_lock_a i_reset_lock_b i_spare_0 i_spare_1 i_test_wb_clk_i
-+ i_tex_in[0] i_tex_in[1] i_tex_in[2] i_tex_in[3] i_vec_csb i_vec_mosi i_vec_sclk
-+ o_gpout[0] o_gpout[1] o_gpout[2] o_gpout[3] o_gpout[4] o_gpout[5] o_hsync o_reset
-+ o_rgb[0] o_rgb[10] o_rgb[11] o_rgb[12] o_rgb[13] o_rgb[14] o_rgb[15] o_rgb[16] o_rgb[17]
-+ o_rgb[18] o_rgb[19] o_rgb[1] o_rgb[20] o_rgb[21] o_rgb[22] o_rgb[23] o_rgb[2] o_rgb[3]
-+ o_rgb[4] o_rgb[5] o_rgb[6] o_rgb[7] o_rgb[8] o_rgb[9] o_tex_csb o_tex_oeb0 o_tex_out0
-+ o_tex_sclk o_vsync ones[0] ones[10] ones[11] ones[12] ones[13] ones[14] ones[15]
-+ ones[1] ones[2] ones[3] ones[4] ones[5] ones[6] ones[7] ones[8] ones[9] vccd1 vssd1
-+ zeros[0] zeros[10] zeros[11] zeros[12] zeros[13] zeros[14] zeros[15] zeros[1] zeros[2]
-+ zeros[3] zeros[4] zeros[5] zeros[6] zeros[7] zeros[8] zeros[9]
++ i_reg_outs_enb i_reg_sclk i_reset_lock_a i_reset_lock_b i_spare_0 i_spare_1 i_test_uc2
++ i_test_wci i_tex_in[0] i_tex_in[1] i_tex_in[2] i_tex_in[3] i_vec_csb i_vec_mosi
++ i_vec_sclk o_gpout[0] o_gpout[1] o_gpout[2] o_gpout[3] o_gpout[4] o_gpout[5] o_hsync
++ o_reset o_rgb[0] o_rgb[10] o_rgb[11] o_rgb[12] o_rgb[13] o_rgb[14] o_rgb[15] o_rgb[16]
++ o_rgb[17] o_rgb[18] o_rgb[19] o_rgb[1] o_rgb[20] o_rgb[21] o_rgb[22] o_rgb[23] o_rgb[2]
++ o_rgb[3] o_rgb[4] o_rgb[5] o_rgb[6] o_rgb[7] o_rgb[8] o_rgb[9] o_tex_csb o_tex_oeb0
++ o_tex_out0 o_tex_sclk o_vsync ones[0] ones[10] ones[11] ones[12] ones[13] ones[14]
++ ones[15] ones[1] ones[2] ones[3] ones[4] ones[5] ones[6] ones[7] ones[8] ones[9]
++ vccd1 vssd1 zeros[0] zeros[10] zeros[11] zeros[12] zeros[13] zeros[14] zeros[15]
++ zeros[1] zeros[2] zeros[3] zeros[4] zeros[5] zeros[6] zeros[7] zeros[8] zeros[9]
 .ends
 
 .subckt user_project_wrapper analog_io[0] analog_io[10] analog_io[11] analog_io[12]
@@ -123,7 +123,7 @@
 + wbs_dat_o[28] wbs_dat_o[29] wbs_dat_o[2] wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3]
 + wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6] wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0]
 + wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3] wbs_stb_i wbs_we_i
-Xtop_ew_algofoogle user_clock2 la_data_in[98] la_data_in[91] la_data_in[75] la_data_in[69]
+Xtop_ew_algofoogle io_in[11] la_data_in[98] la_data_in[91] la_data_in[75] la_data_in[69]
 + la_data_in[70] la_data_in[71] la_data_in[72] la_data_in[73] la_data_in[74] la_data_in[79]
 + la_data_in[80] la_data_in[81] la_data_in[82] la_data_in[83] la_data_in[84] la_data_in[85]
 + la_data_in[86] la_data_in[87] la_data_in[88] la_data_in[89] la_data_in[90] la_data_in[92]
@@ -132,8 +132,8 @@ Xtop_ew_algofoogle user_clock2 la_data_in[98] la_data_in[91] la_data_in[75] la_d
 + la_data_in[105] la_data_in[106] la_data_in[107] la_data_in[108] la_data_in[109]
 + la_data_in[110] la_oenb[64] la_data_in[111] la_data_in[112] la_data_in[113] la_data_in[76]
 + la_data_in[78] la_data_in[114] la_data_in[77] la_data_in[64] la_data_in[65] la_data_in[115]
-+ io_in[35] wb_clk_i io_in[22] io_in[31] io_in[32] io_in[34] la_data_in[66] la_data_in[68]
-+ la_data_in[67] io_out[23] io_out[24] io_out[25] io_out[26] top_ew_algofoogle/o_gpout[4]
++ io_in[35] user_clock2 wb_clk_i io_in[22] io_in[31] io_in[32] io_in[34] la_data_in[66]
++ la_data_in[68] la_data_in[67] io_out[23] io_out[24] io_out[25] io_out[26] top_ew_algofoogle/o_gpout[4]
 + top_ew_algofoogle/o_gpout[5] io_out[18] top_ew_algofoogle/o_reset top_ew_algofoogle/o_rgb[0]
 + top_ew_algofoogle/o_rgb[10] top_ew_algofoogle/o_rgb[11] top_ew_algofoogle/o_rgb[12]
 + top_ew_algofoogle/o_rgb[13] top_ew_algofoogle/o_rgb[14] top_ew_algofoogle/o_rgb[15]
@@ -143,14 +143,14 @@ Xtop_ew_algofoogle user_clock2 la_data_in[98] la_data_in[91] la_data_in[75] la_d
 + top_ew_algofoogle/o_rgb[2] top_ew_algofoogle/o_rgb[3] top_ew_algofoogle/o_rgb[4]
 + top_ew_algofoogle/o_rgb[5] top_ew_algofoogle/o_rgb[6] top_ew_algofoogle/o_rgb[7]
 + top_ew_algofoogle/o_rgb[8] top_ew_algofoogle/o_rgb[9] io_out[20] io_oeb[22] io_out[22]
-+ io_out[21] io_out[19] top_ew_algofoogle/ones[0] top_ew_algofoogle/ones[10] top_ew_algofoogle/ones[11]
++ io_out[21] io_out[19] io_oeb[11] top_ew_algofoogle/ones[10] top_ew_algofoogle/ones[11]
 + top_ew_algofoogle/ones[12] top_ew_algofoogle/ones[13] top_ew_algofoogle/ones[14]
 + top_ew_algofoogle/ones[15] top_ew_algofoogle/ones[1] top_ew_algofoogle/ones[2] top_ew_algofoogle/ones[3]
 + top_ew_algofoogle/ones[4] top_ew_algofoogle/ones[5] top_ew_algofoogle/ones[6] top_ew_algofoogle/ones[7]
 + top_ew_algofoogle/ones[8] top_ew_algofoogle/ones[9] vccd1 vssd1 io_oeb[23] top_ew_algofoogle/zeros[10]
 + top_ew_algofoogle/zeros[11] top_ew_algofoogle/zeros[12] top_ew_algofoogle/zeros[13]
 + top_ew_algofoogle/zeros[14] top_ew_algofoogle/zeros[15] io_oeb[24] io_oeb[25] io_oeb[26]
-+ io_oeb[18] io_oeb[19] io_oeb[20] io_oeb[21] top_ew_algofoogle/zeros[8] top_ew_algofoogle/zeros[9]
++ io_oeb[18] io_oeb[19] io_oeb[20] io_oeb[21] io_out[11] top_ew_algofoogle/zeros[9]
 + top_ew_algofoogle
 .ends
 

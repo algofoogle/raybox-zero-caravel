@@ -79,7 +79,7 @@ async def test_start(dut):
 @cocotb.test()
 async def test_all(dut):
     hrange = 800
-    vrange = 525*3 #NOTE: Can multiply this by number of frames desired.
+    vrange = 525*4 #NOTE: Can multiply this by number of frames desired.
     hres = HIGH_RES or 1
 
     print("Rendering first full frame...")
