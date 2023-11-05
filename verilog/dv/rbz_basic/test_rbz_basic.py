@@ -1,9 +1,14 @@
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles, with_timeout
+from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles, Timer, with_timeout
 from cocotb.types import Logic
 import random
 import re
+
+CLOCK_PERIOD = 40.0 # ns
+HIGH_RES = None #10.0 # If not None, scale H res by this, and step by CLOCK_PERIOD/HIGH_RES instead of unit clock cycles.
+
+
 
 # Startup: Wait for the design to pulse gpio (to show firmware has started running)
 # and then wait for our design's reset to be released to know it is starting from
@@ -13,10 +18,15 @@ async def test_start(dut):
     # dut.VGND <= 0
     # dut.VPWR <= 1
 
-    clock = Clock(dut.clk, 40, units="ns")
-    cocotb.fork(clock.start())
+    # Clock for SoC:
+    clk = Clock(dut.clk, 40, units="ns")
+    cocotb.start_soon(clk.start())
 
-    print("Clock started")
+    # Clock for Anton's design:
+    anton_clock = Clock(dut.anton_clock, 40, units="ns")
+    cocotb.start_soon(anton_clock.start())
+
+    print("Clocks started")
     
     # Start up with SOC reset asserted, and power off:
     dut.RSTB.value = 0
@@ -69,19 +79,30 @@ async def test_start(dut):
 @cocotb.test()
 async def test_all(dut):
     hrange = 800
-    vrange = 525 #NOTE: Can multiply this by number of frames desired.
+    vrange = 525*4 #NOTE: Can multiply this by number of frames desired.
+    hres = HIGH_RES or 1
+
     print("Rendering first full frame...")
-    clock = Clock(dut.clk, 40, units="ns")
-    cocotb.fork(clock.start())
+
+    # Clock for SoC:
+    clk = Clock(dut.clk, 40, units="ns")
+    cocotb.start_soon(clk.start())
+
+    # Clock for Anton's design:
+    anton_clock = Clock(dut.anton_clock, 40, units="ns")
+    cocotb.start_soon(anton_clock.start())
+
     # Create PPM file to visualise the frame, and write its header:
     img = open("rbz_basic_frame0.ppm", "w")
     img.write("P3\n")
-    img.write(f"{hrange} {vrange}\n")
+    img.write(f"{hrange*hres} {vrange}\n")
     img.write("255\n")
 
     for n in range(vrange): # 525 lines
         print(f"Rendering line {n}")
-        for n in range(hrange): # 800 pixel clocks per line.
+        for n in range(hrange*hres): # 800 pixel clocks per line.
+            if n % 100 == 0:
+                print('.', end='')
             if 'x' in dut.o_gpout.value.binstr:
                 # Output is unknown; make it green:
                 r = 0
@@ -98,8 +119,11 @@ async def test_all(dut):
                 g = 0 | vsyncb
                 b = (b1<<7) | (b0<<6)
             img.write(f"{r} {g} {b}\n")
-            await ClockCycles(dut.clk, 1) 
+            if HIGH_RES is None:
+                await ClockCycles(dut.anton_clock, 1) 
+            else:
+                await Timer(hres, units='ns')
     print("Waiting 1 more clock, for start of next line...")
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.anton_clock, 1)
     img.close()
     print("DONE")

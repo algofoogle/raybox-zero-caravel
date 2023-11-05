@@ -112,13 +112,13 @@ void main()
     // 48:47 i_mode[1:0] <= 11
     // 34:-- i_debug_map_overlay <= 1
     reg_la3_data =
-                 0b00011000000000000100;
+                 0b00000000000000000100;
     // xxxxxxxxxxxx--------------------     (unused LAs)
     // ------------0-------------------     i_spare_0
     // -------------0------------------     i_reg_outs_enb (0=enable registered outputs)
     // --------------0-----------------     i_mode[2]: 0=SPI textures; 1=generated textures
-    // ---------------1----------------     i_mode[1]: i_inc_py
-    // ----------------1---------------     i_mode[0]: i_inc_px
+    // ---------------0----------------     i_mode[1]: i_inc_py
+    // ----------------0---------------     i_mode[0]: i_inc_px
     // -----------------000000---------     i_gpout5_sel (unused)
     // -----------------------000000---     i_gpout4_sel (unused)
     // -----------------------------1--     i_debug_map_overlay
@@ -136,6 +136,82 @@ void main()
     reg_la2_data = (la2 |= 0b11);
     // Now RELEASE reset by making them different (i.e. toggle the lowest bit):
     reg_la2_data = (la2 ^= 0b01);
+
+
+    // === SET A NEW POV THAT WILL APPLY AT THE NEXT FRAME ===
+
+    // uint32_t pov[3] = {
+    //     0b00110100000011000100101010001000, // 32
+    //     0b10011111011001110000000110010000, // 32
+    //     0b0010011111                        // 10
+    // };
+    // Bit-bang new POV vectors via vec SPI:
+    ///                                        +----- MOSI
+    //                         Clear these 3   |+---- SCLK
+    //                               |         ||+--- /CS
+    //                              /|\        |||
+    reg_la2_data = (la2 = (la2 & ~0b11100) | 0b00100); // /CS=1     Turn chip off -- resets SPI state too
+    reg_la2_data = (la2 = (la2 & ~0b11100) | 0b00000); // /CS=0     Turn chip ON
+    int i;
+    uint32_t s;
+    s = 0b00110100000011000100101010001000;
+    for (i=0; i<32; ++i) {
+    reg_la2_data = (la2 = (la2 & ~0b11100) | ((s>>27)&0b10000));    // Lower clock and assert MOSI.
+    reg_la2_data = (la2                             | 0b01000);     // Raise clock.
+    s <<= 1;
+    }
+    s = 0b10011111011001110000000110010000;
+    for (i=0; i<32; ++i) {
+    reg_la2_data = (la2 = (la2 & ~0b11100) | ((s>>27)&0b10000));    // Lower clock and assert MOSI.
+    reg_la2_data = (la2                             | 0b01000);     // Raise clock.
+    s <<= 1;
+    }
+    s = 0b00100111110000000000000000000000;
+    for (i=0; i<10; ++i) {
+    reg_la2_data = (la2 = (la2 & ~0b11100) | ((s>>27)&0b10000));    // Lower clock and assert MOSI.
+    reg_la2_data = (la2                             | 0b01000);     // Raise clock.
+    s <<= 1;
+    }
+    reg_la2_data = (la2 = (la2 & ~0b11100)          | 0b00100); // /CS=1     Turn chip OFF again.
+
+
+    // === SET ONE OF OUR SPI 'REG' REGISTERS ('LEAK' IN THIS CASE) ===
+
+    //NOTE: With the POV update above, we might run out of time before the next VGA frame can process it,
+    // in which case the update will be delayed until the next frame.
+
+    // Bit-bang a new LEAK value via reg SPI:
+    ///                                                  +----- MOSI
+    //                         Clear these 3             |+---- SCLK
+    //                               |                   ||+--- /CS
+    //                              /|\                  |||
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b001000000000000); // /CS=1     Turn chip off -- resets SPI state too
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); // /CS=0     Turn chip ON
+    // Send CMD 0x2 (0010)
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b100000000000000); //           MOSI=1    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b110000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    // Send LEAK value 0x0D (001101)
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b100000000000000); //           MOSI=1    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b110000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b100000000000000); //           MOSI=1    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b110000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b000000000000000); //           MOSI=0    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b010000000000000); //                     CLK=1
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b100000000000000); //           MOSI=1    CLK=0
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b110000000000000); //                     CLK=1
+    // Release /CS
+    reg_la2_data = (la2 = (la2 & ~0b111000000000000) | 0b111000000000000); // /CS=1
+
 
     // Pulse gpio again to show that the firmware is finishing now:
     reg_gpio_out = 1;

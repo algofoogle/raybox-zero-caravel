@@ -65,9 +65,7 @@ module user_project_wrapper (user_clock2,
  wire \a0s[13] ;
  wire \a0s[14] ;
  wire \a0s[15] ;
- wire \a0s[8] ;
  wire \a0s[9] ;
- wire \a1s[0] ;
  wire \a1s[10] ;
  wire \a1s[11] ;
  wire \a1s[12] ;
@@ -87,7 +85,7 @@ module user_project_wrapper (user_clock2,
  wire \anton_gpout[5] ;
  wire anton_o_reset;
 
- top_ew_algofoogle top_ew_algofoogle (.i_clk(user_clock2),
+ top_ew_algofoogle top_ew_algofoogle (.i_clk(io_in[11]),
     .i_debug_map_overlay(la_data_in[98]),
     .i_debug_trace_overlay(la_data_in[91]),
     .i_debug_vec_overlay(la_data_in[75]),
@@ -100,6 +98,8 @@ module user_project_wrapper (user_clock2,
     .i_reset_lock_b(la_data_in[65]),
     .i_spare_0(la_data_in[115]),
     .i_spare_1(io_in[35]),
+    .i_test_uc2(user_clock2),
+    .i_test_wci(wb_clk_i),
     .i_vec_csb(la_data_in[66]),
     .i_vec_mosi(la_data_in[68]),
     .i_vec_sclk(la_data_in[67]),
@@ -200,7 +200,7 @@ module user_project_wrapper (user_clock2,
     \a1s[3] ,
     \a1s[2] ,
     \a1s[1] ,
-    \a1s[0] }),
+    io_oeb[11]}),
     .zeros({\a0s[15] ,
     \a0s[14] ,
     \a0s[13] ,
@@ -208,7 +208,7 @@ module user_project_wrapper (user_clock2,
     \a0s[11] ,
     \a0s[10] ,
     \a0s[9] ,
-    \a0s[8] ,
+    io_out[11],
     io_oeb[21],
     io_oeb[20],
     io_oeb[19],
