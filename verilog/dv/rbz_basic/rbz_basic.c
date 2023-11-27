@@ -112,10 +112,10 @@ void main()
     // 48:47 i_mode[1:0] <= 11
     // 34:-- i_debug_map_overlay <= 1
     reg_la3_data =
-                 0b00000000000000000100;
+                 0b01000000000000000100;
     // xxxxxxxxxxxx--------------------     (unused LAs)
     // ------------0-------------------     i_spare_0
-    // -------------0------------------     i_reg_outs_enb (0=enable registered outputs)
+    // -------------1------------------     i_reg_outs_enb (0=enable registered outputs)
     // --------------0-----------------     i_mode[2]: 0=SPI textures; 1=generated textures
     // ---------------0----------------     i_mode[1]: i_inc_py
     // ----------------0---------------     i_mode[0]: i_inc_px

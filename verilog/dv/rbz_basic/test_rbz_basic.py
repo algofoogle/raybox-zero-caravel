@@ -6,7 +6,7 @@ import random
 import re
 
 CLOCK_PERIOD = 40.0 # ns
-HIGH_RES = None #10.0 # If not None, scale H res by this, and step by CLOCK_PERIOD/HIGH_RES instead of unit clock cycles.
+HIGH_RES = 10.0 # If not None, scale H res by this, and step by CLOCK_PERIOD/HIGH_RES instead of unit clock cycles.
 
 
 
@@ -95,12 +95,12 @@ async def test_all(dut):
     # Create PPM file to visualise the frame, and write its header:
     img = open("rbz_basic_frame0.ppm", "w")
     img.write("P3\n")
-    img.write(f"{hrange*hres} {vrange}\n")
+    img.write(f"{int(hrange*hres)} {vrange:d}\n")
     img.write("255\n")
 
     for n in range(vrange): # 525 lines
         print(f"Rendering line {n}")
-        for n in range(hrange*hres): # 800 pixel clocks per line.
+        for n in range(int(hrange*hres)): # 800 pixel clocks per line.
             if n % 100 == 0:
                 print('.', end='')
             if 'x' in dut.o_gpout.value.binstr:
@@ -122,7 +122,7 @@ async def test_all(dut):
             if HIGH_RES is None:
                 await ClockCycles(dut.anton_clock, 1) 
             else:
-                await Timer(hres, units='ns')
+                await Timer(CLOCK_PERIOD/hres, units='ns')
     print("Waiting 1 more clock, for start of next line...")
     await ClockCycles(dut.anton_clock, 1)
     img.close()
